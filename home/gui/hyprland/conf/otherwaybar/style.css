@@ -1,10 +1,11 @@
+@define-color background transparent;
 @define-color foreground #eff0f1;
-@define-color foreground-inactive #7f8c8d;
-@define-color background #232629;
+@define-color foreground-active #7f8c8d;
 @define-color background-alt #31363b;
+@define-color workspace-full #000000;
 
 * {
-    font-family: Mononoki Nerd Font;
+    font-family: Fira Nerd Font;
     font-size: 17px;
     padding: 0;
     margin: 0;
@@ -18,15 +19,24 @@
 #workspaces button {
     padding-left: 1em;
     padding-right: 1.3em;
+    color: @workspace-full;
+    background-color: @background-alt;
 }
 
 #workspaces button.empty {
-    color: @foreground-inactive;
+    color: @foreground;
+    background-color: @background-alt;
 }
 
 #workspaces button.active {
-    background-color: @background-alt;
+    background-color: @foreground-active;
     border-radius: 3px;
+}
+
+#clock {
+    background-color: @background-alt;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 #wireplumber,
