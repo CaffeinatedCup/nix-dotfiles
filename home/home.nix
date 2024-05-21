@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/zack";
   
   # Themes
-  catppuccin.flavour = "mocha";
+  # catppuccin.flavour = "mocha";
 
   imports = [
   ./gui/hyprland/hyprland.nix

@@ -13,7 +13,7 @@
   # starship - an customizable prompt for any shell
   programs.starship = {
     enable = true;
-    catppuccin.enable = true;
+   # catppuccin.enable = true;
     # custom settings
     settings = {
       add_newline = false;
@@ -27,12 +27,12 @@
   programs.alacritty = {
     enable = true;
     # custom settings
-    catppuccin.enable = true;
+  #  catppuccin.enable = true;
   };
 
   programs.kitty = {
     enable = true;
-    catppuccin.enable = true;
+  #  catppuccin.enable = true;
   };
 
 #  programs.wezterm = {
