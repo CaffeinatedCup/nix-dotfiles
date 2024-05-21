@@ -10,7 +10,7 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
 
 
     ## My nix configs ##
@@ -29,7 +29,7 @@
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };
 
@@ -56,7 +56,7 @@
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };
 
