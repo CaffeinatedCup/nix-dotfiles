@@ -10,7 +10,7 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, catppuccin, ... }: {
+  outputs = { nixpkgs, ... }@inputs: {
 
 
     ## My nix configs ##
