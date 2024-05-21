@@ -2,8 +2,8 @@
 
 {
   wayland.windowManager.hyprland = {
-  enable = true;
-  catppuccin.enable = true;
+  #enable = true;
+  #catppuccin.enable = true;
   extraConfig = builtins.readFile ./conf/hyprland.conf;
   };
 

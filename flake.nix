@@ -7,8 +7,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/Hyprland";
-    catppuccin.url = "github:catppuccin/nix";
-    stylix.url = "github:danth/stylix";
+    #catppuccin.url = "github:catppuccin/nix";
+    #stylix.url = "github:danth/stylix";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -21,9 +21,10 @@
         ## thinker, the old thinkpad ##
         thinker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        #specialArgs = {inherit inputs;};
         modules = [
           ./hosts/thinker/default.nix
-          inputs.stylix.nixosModules.stylix
+          #stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -31,7 +32,7 @@
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
-                inputs.catppuccin.homeManagerModules.catppuccin
+                #inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };
 
@@ -58,7 +59,7 @@
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
-                inputs.catppuccin.homeManagerModules.catppuccin
+                #inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };
 
