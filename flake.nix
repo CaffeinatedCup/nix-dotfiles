@@ -8,6 +8,7 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     catppuccin.url = "github:catppuccin/nix";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -22,6 +23,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/thinker/default.nix
+          inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
