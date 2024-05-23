@@ -16,6 +16,7 @@
   ./term/shells.nix
   ./term/files.nix
   ./gui/browsers.nix
+  ./gui/themes.nix
   ];
 
   # This value determines the home Manager release that your
