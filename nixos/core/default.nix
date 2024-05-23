@@ -7,7 +7,6 @@
     ./locale.nix
     ./boot.nix
     ./nix.nix
-    ./themes.nix
-    ./gui.nix
+    ./desktop.nix
   ];
 }
