@@ -13,6 +13,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
+  programs.dconf.enable = true;
+
   # Users
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
