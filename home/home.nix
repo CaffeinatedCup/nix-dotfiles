@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "zack";
@@ -16,7 +16,7 @@
   ./term/shells.nix
   ./term/files.nix
   ./gui/browsers.nix
-  ./gui/themes.nix
+  #./gui/themes.nix
   ];
 
   # This value determines the home Manager release that your

@@ -2,7 +2,7 @@
 
 {
   wayland.windowManager.hyprland = {
-  #enable = true;
+  enable = true;
   #catppuccin.enable = true;
   extraConfig = builtins.readFile ./conf/hyprland.conf;
   };
@@ -35,5 +35,6 @@
     hyprlock #lockscreen
     hyprpicker #color picker
     mako #notification daemon
+    swaybg
   ];
 }
