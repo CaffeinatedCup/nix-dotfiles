@@ -8,10 +8,10 @@
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
   ./editors/base.nix
-  ./term/utils.nix
-  ./term/base.nix
-  ./term/shells.nix
-  ./term/files.nix
+  ./tui/pkgs.nix
+  ./tui/base.nix
+  ./tui/shells.nix
+  ./tui/files.nix
   ./gui/browsers.nix
   #./gui/gtk.nix
   ];
