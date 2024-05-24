@@ -3,9 +3,6 @@
 {
   home.username = "zack";
   home.homeDirectory = "/home/zack";
-  
-  # Themes
-  # catppuccin.flavour = "mocha";
 
   imports = [
   ./gui/hyprland/hyprland.nix
@@ -16,7 +13,7 @@
   ./term/shells.nix
   ./term/files.nix
   ./gui/browsers.nix
-  #./gui/themes.nix
+  #./gui/gtk.nix
   ];
 
   # This value determines the home Manager release that your

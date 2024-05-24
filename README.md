@@ -1,9 +1,9 @@
 My Personal NixOs Config
 
 Issue:
- - Asks for confirmation to close kitty every time (only sometimes?)
  - Does not have floating setting for hyprland, or any configuration
- - Waybar looks ugly and so does the fuzzel
+ - Add waybar highlighted workspace and refit the icons
+ - Switch to rofi
 
 Need to add:
 - Support for more hosts
