@@ -28,6 +28,7 @@
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
     gnumake
+    wev # Wayland even viewer (for keybinds)
 
     # networking tools
     socat # replacement of openbsd-netcat

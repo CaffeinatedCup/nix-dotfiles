@@ -1,75 +1,67 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 24, // Waybar height
-    // "width": 1366, // Waybar width
-    // Choose the order of the modules
-
-    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
-
-    "modules-center": ["hyprland/window"],
-
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
-
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "format-icons": {
-            "1": "\u265a",
-            "2": "\u265b",
-            "3": "\u265c",
-            "4": "\u265d",
-            "5": "\u265e",
-        },
-        "icon-size": 24,
-        "sort-by-number": true,
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-        }
+  "layer": "top",
+    "modules-left": ["custom/nix", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "backlight", "bluetooth", "network", "battery"],
+    "custom/nix": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-
-    "tray": {
-        // "icon-size": 24,
-        "spacing": 10
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "default": "",
+        "empty": "",
+        "active":""
+      },
+      "persistent-workspaces": {
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+      }
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% "
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "battery": {
-        "bat": "BAT0",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+      "format": "<span color='#b4befe'> </span>{:%H:%M}",
     },
     "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "default": ["", ""]
-        },
-        "on-click": "pavucontrol"
+      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "format-muted": "󰸈",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["󰕿", "󰖀", "󰕾"]
+      },
+      "scroll-step": 1,
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "bluetooth": {
+      "format": "<span color='#b4befe'></span>",
+      // "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": false,
+    },
+    "battery": {
+      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
+      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-charging": "<span color='#b4befe'>󰂅</span> {capacity}%",
+      "tooltip": false,
     },
 }
