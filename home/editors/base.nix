@@ -4,9 +4,11 @@
   # TODO add nix code to integrate neovim config here
 
 
-  # Add any editors here
-  home.packages = with pkgs; [
-  neovim
-  emacs #instructions to add doom in directory
-  ];
+  # Neovim and make default
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
+
+  # Emacs program and daemon
+  programs.emacs.enable = true;
+  services.emacs.enable = true;
 }
