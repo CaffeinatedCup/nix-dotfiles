@@ -3,18 +3,9 @@
 {
   # Nixy stuff like cachix, flake setting, system packages, and users bc I only have one
 
-  # System packages
-  environment.systemPackages = with pkgs; [
-     vim
-     wget
-     brightnessctl
-  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-
-  programs.dconf.enable = true;
 
   # Users
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -22,10 +13,6 @@
     isNormalUser = true;
     description = "zack";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      # Move this to home manager
-      firefox
-    ];
   };
 
   # Cachix stuff
@@ -37,6 +24,32 @@
 
   # Enables flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # System packages
+  environment.systemPackages = with pkgs; [
+     vim
+     wget
+     brightnessctl
+
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
+    zstd
+
+    # utils
+    jq # A lightweight and flexible command-line JSON processor
+
+    # networking tools
+    socat # replacement of openbsd-netcat
+
+    # misc
+    file
+    which
+    tree
+
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
