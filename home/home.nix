@@ -8,7 +8,6 @@
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
   ./editors/base.nix
-  ./tui/pkgs.nix
   ./tui/base.nix
   ./tui/shells.nix
   ./tui/files.nix
