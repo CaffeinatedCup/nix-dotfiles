@@ -6,10 +6,10 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
 
-    # Rice stuff
-    pipes
-    fastfetch
-    neofetch
+    # Rice
+    pipes # Random pipes
+    fastfetch # Neofetch replacement but faster
+    pfetch # Minimal fetch
     cowsay
     cmatrix
     cbonsai
