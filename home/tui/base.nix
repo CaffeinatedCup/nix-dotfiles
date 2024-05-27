@@ -21,20 +21,19 @@
     };
   };
 
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-  programs.alacritty = {
-    enable = true;
-  };
+  ## All these are programs I want but have yet to configure
 
-  programs.kitty = {
-    enable = true;
-  };
+  programs.tmux.enable = true;
+  programs.kitty.enable = true;
+  programs.alacritty.enable = true;
 
-  programs.tmux = {
-    enable = true;
-  };
-
+  # cd replacement
+  programs.zoxide.enable = true;
+  # cat replacement
+  programs.bat.enable = true;
+  # ls replacement
   programs.eza.enable = true;
+  # git ui for terminal
   programs.lazygit.enable = true;
 
   home.packages = with pkgs; [
