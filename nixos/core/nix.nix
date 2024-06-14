@@ -30,6 +30,7 @@
      vim
      wget
      brightnessctl
+     hwinfo
 
     # archives
     zip
