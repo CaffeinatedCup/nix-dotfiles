@@ -7,6 +7,9 @@
 
   packages = with pkgs; [
 
+  iosevka
+  jetbrains-mono
+  fira-code
   material-design-icons
   font-awesome
   nerdfonts
