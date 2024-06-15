@@ -1,19 +1,15 @@
 My Personal NixOs Config
 
-Issue:
- - Does not have floating setting for hyprland, or any configuration
- - Add waybar highlighted workspace and refit the icons
- - Switch to rofi
-
 Need to add:
-- Support for more hosts
-- basic features like bluetooth and sound
-- Wallpaper for hyprland (swww)
-- Gaming stuff
-- Emacs and Neovim configs
-- File managers
-- Themes (gtk, maybe pywal, maybe nix colors)
-- Zsh, tmux, and terminal stuff
-- Browser configuration
+- Switch to Rofi
+- Add to waybar (powerbutton, dropdowns for stuff, better clock, make the flake do smth)
+- Add to Hyprland (keybinds, window control, swaync)
+- Wallpaper switching (swww)
+- Gaming
+- Neovim configs with nixvim
+- Make bash script for doom install
+- File managers (yazi and a better GUI one)
+- Setup Zsh config
+- Browser configuration (use brave)
 - Secrets management
 - SSH
