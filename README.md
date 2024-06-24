@@ -14,3 +14,9 @@ Need to add:
 - Browser configuration (use brave)
 - Secrets management
 - SSH
+
+
+(Additions to waybar)
+- Powerbutton on left side that opens wlougout and shutdown option
+- Tooltip on clock that shows date
+- Dropdown on flake that shows calc, terminal, browser, and other shit
