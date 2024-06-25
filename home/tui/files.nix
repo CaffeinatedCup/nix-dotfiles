@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  # File managers and prob more
+  # File managers, RSS and prob more.
 
   programs.lf = {
     enable = true;
@@ -10,8 +10,9 @@
 
   programs.yazi.enable = true;
 
- # programs.thunar = {
- #  enable = true;
-    #add plugins here too
- # };
+  programs.newsboat.enable = true;
+
+  home.packages = with pkgs; [
+    pcmanfm # GUI file manager
+  ];
 }
