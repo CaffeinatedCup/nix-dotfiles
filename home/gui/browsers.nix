@@ -10,4 +10,10 @@
   programs.librewolf = {
     enable = true;
   };
+
+
+  home.packages = with pkgs; [
+    brave
+  ];
+
 }
