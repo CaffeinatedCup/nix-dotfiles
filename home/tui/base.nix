@@ -53,11 +53,13 @@
     gnumake
 
     yq-go # yaml processor https://github.com/mikefarah/yq
+
     # nix related
-    #
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
+    # Allows you to see changes in nix stuff
+    nvd
 
     btop  # replacement of htop/nmon
     iotop # io monitoring
