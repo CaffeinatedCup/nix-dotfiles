@@ -25,6 +25,13 @@
   # Enables flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # nh, a cli helper for nix commands
+  programs.nh = {
+    enable = true;
+    flake = "/home/zack/nix-dotfiles";
+  };
+
+
   # System packages
   environment.systemPackages = with pkgs; [
      vim
