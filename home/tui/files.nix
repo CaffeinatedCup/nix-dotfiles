@@ -10,7 +10,14 @@
 
   programs.yazi.enable = true;
 
-  programs.newsboat.enable = true;
+  programs.newsboat = {
+    enable = true;
+    urls = [
+      {
+        url = "https://techcrunch.com/feed";
+      }
+    ];
+  };
 
   home.packages = with pkgs; [
     pcmanfm # GUI file manager
