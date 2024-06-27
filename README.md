@@ -9,9 +9,7 @@ Need to add:
 - Gaming
 - Neovim configs with nixvim
 - Make bash script for doom install
-- File managers (yazi and a better GUI one)
-- Setup Zsh config
-- Browser configuration (use brave)
+- Browser configuration
 - Secrets management
 - SSH
 
