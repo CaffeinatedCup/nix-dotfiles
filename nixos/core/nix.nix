@@ -7,9 +7,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  programs.zsh.enable = true;
+
   # Users
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "zack";
     extraGroups = [ "networkmanager" "wheel" ];

@@ -2,8 +2,16 @@
 
 {
   # Bash and zsh aliases
-  # TODO add zsh, zsh completion and alias stuff
   # TODO also add PATH stuff here
+
+  # Note: Default shell set in nix.nix
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+  };
 
   programs.bash = {
     enable = true;

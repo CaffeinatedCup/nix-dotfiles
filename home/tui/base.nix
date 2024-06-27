@@ -12,6 +12,7 @@
   # starship - an customizable prompt for any shell
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
     # custom settings
     settings = {
       add_newline = false;
@@ -24,7 +25,15 @@
   ## All these are programs I want but have yet to configure
 
   programs.tmux.enable = true;
-  programs.kitty.enable = true;
+
+  programs.kitty = {
+    enable = true;
+    shellIntegration.enableZshIntegration = true;
+    extraConfig = ''
+    enable_audio_bell no
+    '';
+  };
+
   programs.alacritty.enable = true;
 
   # cd replacement
