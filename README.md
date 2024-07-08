@@ -6,10 +6,8 @@ Need to add:
 - For nix icon make a dropdown for things (idk what, I saw it on unixporn)
 - Add to Hyprland (keybinds, window control, swaync)
 - Wallpaper switching (swww)
-- Gaming
 - Neovim configs with nixvim
 - Make bash script for doom install
-- Browser configuration
 - Secrets management
 - SSH
 
