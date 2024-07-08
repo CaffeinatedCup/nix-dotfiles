@@ -19,7 +19,7 @@
     };
 
     "/.config/fuzzel" = {
-      source = ./conf/fuzzel;
+     source = ./conf/fuzzel;
       recursive = true;
     };
   };

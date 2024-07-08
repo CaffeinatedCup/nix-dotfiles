@@ -21,6 +21,11 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.home-manager.follows = "home-manager";
+
+    # Anyrun (wayland launcher)
+    anyrun.url = "github:anyrun-org/anyrun";
+    anyrun.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
@@ -52,6 +57,7 @@
       };
 
 
+        ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
