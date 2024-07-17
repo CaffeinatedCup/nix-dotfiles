@@ -54,6 +54,9 @@
     cowsay
     cmatrix
     cbonsai
+    fortune
+    lolcat
+    cava
 
     fd # makes file indexing fire
     fzf # A command-line fuzzy finder
