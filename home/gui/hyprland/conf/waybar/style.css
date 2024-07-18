@@ -28,10 +28,10 @@ window#waybar {
   color: #b4befe;
 }
 
-#clock, #backlight, #network, #pulseaudio, #bluetooth, #network, #battery{
+#clock, #backlight, #network, #pulseaudio, #bluetooth, #network, #battery, #custom-power{
   border-radius: 10px;
   background-color: rgba(30, 30, 46, .85);
-  color: #cdd6f4;
+  color: #b4befe;
   margin-top: 15px;
   margin-right: 5px;
   padding-left: 10px;

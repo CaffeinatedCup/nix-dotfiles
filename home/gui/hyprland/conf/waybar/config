@@ -2,12 +2,22 @@
   "layer": "top",
     "modules-left": ["custom/nix", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "bluetooth", "network", "battery"],
+    "modules-right": ["pulseaudio", "backlight", "bluetooth", "network", "battery", "custom/power"],
+
+
     "custom/nix": {
       "format": "  ",
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
+
+
+    "custom/power": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "wlogout"
+    },
+
     "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
