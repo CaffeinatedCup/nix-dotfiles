@@ -12,7 +12,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = "
-      fortune | cowsay -f bong";
+      fastfetch";
   };
 
   programs.bash = {
