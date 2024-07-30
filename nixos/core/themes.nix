@@ -12,6 +12,7 @@
  
   home-manager.sharedModules = [{
   stylix.targets.emacs.enable = false;
+  stylix.targets.waybar.enable = false;
   }];
     
 }

@@ -22,10 +22,12 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.home-manager.follows = "home-manager";
 
+    # Nix Colors (test)
+    nix-colors.url = "github:misterio77/nix-colors";
+
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
 
     ## My nix configs ##
     nixosConfigurations = {
@@ -34,21 +36,24 @@
         ## thinker, the old thinkpad ##
         thinker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs; };
         modules = [
           ./hosts/thinker/default.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
+	    extraSpecialArgs = { inherit inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.zack = {
               imports = [
+                inputs.nix-colors.homeManagerModules.default
                 ./home/home.nix
               ];
             };
           }
 
-          { _module.args = {inherit inputs; };}
+          #{ _module.args = {inherit inputs; };}
         ];
       };
 
@@ -56,6 +61,7 @@
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs; };
         modules = [
           ./hosts/liberator/default.nix
           inputs.stylix.nixosModules.stylix
@@ -70,7 +76,8 @@
             };
           }
 
-          { _module.args = {inherit inputs; };}
+          #{ _module.args = {inherit inputs; };}
+
         ];
       };
 
