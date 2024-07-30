@@ -71,6 +71,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.zack = {
               imports = [
+                inputs.nix-colors.homeManagerModules.default
                 ./home/home.nix
               ];
             };
