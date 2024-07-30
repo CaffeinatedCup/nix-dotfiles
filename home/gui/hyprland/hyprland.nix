@@ -18,9 +18,22 @@
       recursive = true;
     };
 
-    "/.config/fuzzel" = {
-     source = ./conf/fuzzel;
-      recursive = true;
+    #"/.config/fuzzel" = {
+    #  source = ./conf/fuzzel;
+    #  recursive = true;
+    #};
+  };
+
+  programs.fuzzel.enable = true;
+  lib.mkForce.programs.fuzzel.settings = {
+    colors = {
+    background = "1e1e2edd";
+    text = "cdd6f4ff";
+    match = "f38ba8ff";
+    selection = "585b70ff";
+    selection-match = "f38ba8ff";
+    selection-text = "cdd6f4ff";
+    border = "b4befeff";
     };
   };
 
@@ -31,10 +44,12 @@
     hyprpaper #wallpaper
     hypridle #idle daemon
     wlogout #logout daemon
-    fuzzel #app launcher
+    #fuzzel #app launcher
     hyprlock #lockscreen
     hyprpicker #color picker
     mako #notification daemon
     swaybg
+    anyrun #test
+    walker #test
   ];
 }
