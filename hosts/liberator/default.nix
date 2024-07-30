@@ -20,11 +20,12 @@
   hardware = {
     opengl.enable = true;
     opengl.extraPackages = with pkgs; [
-    mesa_drivers 
     intel-compute-runtime 
     vaapiIntel
     ];
   };
+  
+  environment.systemPackages = with pkgs; [ mesa ];
 
   # UEFI boot
   boot.loader.grub.enable = true;
