@@ -7,6 +7,5 @@
     ./locale.nix
     ./nix.nix
     ./desktop.nix
-    ./themes.nix
   ];
 }
