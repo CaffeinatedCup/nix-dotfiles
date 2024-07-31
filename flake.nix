@@ -18,7 +18,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs :
+  outputs = { nixpkgs, home-manager, nix-colors, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -51,7 +51,7 @@
 
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
-        #specialArgs = {inherit inputs; };
+        specialArgs = {inherit inputs; };
         modules = [
           ./hosts/liberator/default.nix
           home-manager.nixosModules.home-manager
