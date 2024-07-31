@@ -4,8 +4,6 @@
   home.username = "zack";
   home.homeDirectory = "/home/zack";
 
-  #extraSpecialArgs = { inherit nix-colors; };
-
   imports = [
    nix-colors.homeManagerModules.default
   ./gui/hyprland/hyprland.nix
