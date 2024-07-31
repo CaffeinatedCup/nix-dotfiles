@@ -13,7 +13,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Nix Colors (test)
+    # Nix Colors
     nix-colors.url = "github:misterio77/nix-colors";
 
   };
@@ -27,26 +27,25 @@
     ## My nix configs ##
     nixosConfigurations = {
 
-
         ## thinker, the old thinkpad ##
-#        thinker = nixpkgs.lib.nixosSystem {
-#        specialArgs = {inherit inputs; };
-#        modules = [
-#          ./hosts/thinker/default.nix
-#          home-manager.nixosModules.home-manager
-#          {
-#            home-manager.useGlobalPkgs = true;
-#            home-manager.useUserPackages = true;
-#            home-manager.users.zack = {
-#              imports = [
-#                ./home/home.nix
-#              ];
-#            };
-#          }
-#
-          #{ _module.args = {inherit inputs; };}
-        #];
-       #};
+        thinker = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs; };
+        modules = [
+          ./hosts/thinker/default.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.zack = {
+              imports = [
+                ./home/home.nix
+              ];
+            };
+          }
+
+        ];
+        specialArgs = {inherit inputs; };
+       };
 
 
         ## liberator, the darter pro 10 ##
@@ -64,11 +63,8 @@
             };
 	    home-manager.extraSpecialArgs = { inherit nix-colors; };
           }
-
-          #{ _module.args = {inherit inputs; };}
-
         ];
-          specialArgs = {inherit inputs; };
+        specialArgs = {inherit inputs; };
       };
 
 
