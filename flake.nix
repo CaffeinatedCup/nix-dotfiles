@@ -29,7 +29,6 @@
 
         ## thinker, the old thinkpad ##
         thinker = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs; };
         modules = [
           ./hosts/thinker/default.nix
           home-manager.nixosModules.home-manager
