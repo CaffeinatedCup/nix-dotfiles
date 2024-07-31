@@ -18,51 +18,48 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, ... }@inputs :
+  let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system}; in {
+    
 
     ## My nix configs ##
     nixosConfigurations = {
 
 
         ## thinker, the old thinkpad ##
-        thinker = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs; };
-        modules = [
-          ./hosts/thinker/default.nix
-          inputs.stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-	    extraSpecialArgs = { inherit inputs; };
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zack = {
-              imports = [
-                inputs.nix-colors.homeManagerModules.default
-                ./home/home.nix
-              ];
-            };
-          }
-
+#        thinker = nixpkgs.lib.nixosSystem {
+#        specialArgs = {inherit inputs; };
+#        modules = [
+#          ./hosts/thinker/default.nix
+#          home-manager.nixosModules.home-manager
+#          {
+#            home-manager.useGlobalPkgs = true;
+#            home-manager.useUserPackages = true;
+#            home-manager.users.zack = {
+#              imports = [
+#                ./home/home.nix
+#              ];
+#            };
+#          }
+#
           #{ _module.args = {inherit inputs; };}
-        ];
-      };
+        #];
+       #};
 
 
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs; };
+        #specialArgs = {inherit inputs; };
         modules = [
           ./hosts/liberator/default.nix
-          inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.zack = {
               imports = [
-                inputs.nix-colors.homeManagerModules.default
                 ./home/home.nix
               ];
             };
