@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, nix-colors, ... }:
 
 {
   # Git, emulators, and rice stuff
@@ -28,10 +28,16 @@
 
   programs.kitty = {
     enable = true;
+    settings = {
+      foreground = "#${config.colorScheme.palette.base05}";
+      background = "#${config.colorScheme.palette.base00}";
+      enable_audio_bell = false;
+      };
+
     shellIntegration.enableZshIntegration = true;
-    extraConfig = ''
-    enable_audio_bell no
-    '';
+    #extraConfig = ''
+    #enable_audio_bell no
+    #'';
   };
 
   programs.alacritty.enable = true;
