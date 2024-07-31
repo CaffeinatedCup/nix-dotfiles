@@ -51,7 +51,6 @@
 
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs; };
         modules = [
           ./hosts/liberator/default.nix
           home-manager.nixosModules.home-manager
@@ -63,11 +62,13 @@
                 ./home/home.nix
               ];
             };
+	    home-manager.extraSpecialArgs = { inherit nix-colors; };
           }
 
           #{ _module.args = {inherit inputs; };}
 
         ];
+          specialArgs = {inherit inputs; };
       };
 
 

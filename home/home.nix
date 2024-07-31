@@ -4,10 +4,10 @@
   home.username = "zack";
   home.homeDirectory = "/home/zack";
 
-  #extraSpecialArgs = { inherit inputs; };
+  #extraSpecialArgs = { inherit nix-colors; };
 
   imports = [
-  inputs.nix-colors.homeManagerModules.default
+   nix-colors.homeManagerModules.default
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
   ./editors/base.nix
