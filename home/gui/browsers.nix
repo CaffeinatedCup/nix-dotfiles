@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     brave
+    gcc #must move
   ];
 
 }

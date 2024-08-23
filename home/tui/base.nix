@@ -49,6 +49,7 @@
       color14 = "#${config.colorScheme.palette.base0C}";
       color15 = "#${config.colorScheme.palette.base06}";
       
+      background_opacity = "0.93";
       enable_audio_bell = false;
       };
 
