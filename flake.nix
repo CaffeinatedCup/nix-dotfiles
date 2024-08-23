@@ -49,6 +49,7 @@
 
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
+
         modules = [
           ./hosts/liberator/default.nix
           home-manager.nixosModules.home-manager
