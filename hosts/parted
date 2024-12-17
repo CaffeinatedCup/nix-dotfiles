@@ -1,0 +1,27 @@
+## Parted ##
+## Framework Laptop 13 with NixOS and Windows ##
+
+{ inputs, pkgs, ... }:
+
+{
+  imports = [
+    ./hardware-configuration.nix
+    ../../nixos/configuration.nix
+  ];
+
+  networking.hostName = "parted";
+
+  services.fwupd.enable = true;
+  # remember to use "fwupdmgr update" on cmd line after install
+  
+  };
+  
+  environment.systemPackages = with pkgs; [ mesa ];
+
+  # UEFI boot
+  boot.loader.grub.enable = true;
+  boot.loader.grub.devices = [ "nodev" ];
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+}
