@@ -68,6 +68,26 @@
       };
 
 
+        ## parted, framework laptop  ##
+        parted = nixpkgs.lib.nixosSystem {
+
+        modules = [
+          ./hosts/parted/default.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.zack = {
+              imports = [
+                ./home/home.nix
+              ];
+            };
+	    home-manager.extraSpecialArgs = { inherit nix-colors; };
+          }
+        ];
+        specialArgs = {inherit inputs; };
+
+      };
     };
   };
 }
