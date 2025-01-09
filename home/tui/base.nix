@@ -109,5 +109,6 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+    ventoy
   ];
 }
