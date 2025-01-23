@@ -5,6 +5,9 @@
 
   #TODO xppen drivers, logitech mouse, and maybe gui's for changing stuff like audio output
 
+  # Enable USB device connection
+  services.udisks2.enable = true;
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
