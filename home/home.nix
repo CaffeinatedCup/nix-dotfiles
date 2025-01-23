@@ -17,7 +17,7 @@
   ];
 
   #Setting Color Scheme
-  colorScheme = nix-colors.colorSchemes.spaceduck;
+  colorScheme = nix-colors.colorSchemes.tokyo-night-dark;
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
