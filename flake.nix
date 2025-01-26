@@ -13,12 +13,9 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Nix Colors
-    nix-colors.url = "github:misterio77/nix-colors";
-
   };
 
-  outputs = { nixpkgs, home-manager, nix-colors, ... }@inputs :
+  outputs = { nixpkgs, home-manager, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -61,7 +58,6 @@
                 ./home/home.nix
               ];
             };
-	    home-manager.extraSpecialArgs = { inherit nix-colors; };
           }
         ];
         specialArgs = {inherit inputs; };
@@ -82,7 +78,6 @@
                 ./home/home.nix
               ];
             };
-	    home-manager.extraSpecialArgs = { inherit nix-colors; };
           }
         ];
         specialArgs = {inherit inputs; };

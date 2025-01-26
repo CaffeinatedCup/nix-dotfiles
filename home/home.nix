@@ -1,11 +1,10 @@
-{ pkgs, config, inputs, nix-colors, ... }:
+{ pkgs, config, inputs, ... }:
 
 {
   home.username = "zack";
   home.homeDirectory = "/home/zack";
 
   imports = [
-   nix-colors.homeManagerModules.default
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
   ./editors/base.nix
@@ -15,9 +14,6 @@
   ./gui/browsers.nix
   #./gui/gtk.nix
   ];
-
-  #Setting Color Scheme
-  colorScheme = nix-colors.colorSchemes.tokyo-night-dark;
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
