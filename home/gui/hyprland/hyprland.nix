@@ -38,5 +38,6 @@
     mako #notification daemon
     swaybg
     rofi-wayland
+    wl-clipboard
   ];
 }

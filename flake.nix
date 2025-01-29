@@ -13,6 +13,9 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Neovim
+    #nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
+    #nvim-config.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs :
