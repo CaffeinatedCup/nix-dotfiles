@@ -12,7 +12,8 @@
   fira-code
   material-design-icons
   font-awesome
-  nerdfonts
+  nerd-fonts._0xproto
+  nerd-fonts.droid-sans-mono
   ];
   };
 
