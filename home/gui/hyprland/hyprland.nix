@@ -40,4 +40,15 @@
     rofi-wayland
     wl-clipboard
   ];
+
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+    extraOptions = [
+      "-max-dedupe-search"
+      "15"
+      "-max-items"
+      "200"
+    ];
+  };
 }

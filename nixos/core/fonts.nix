@@ -2,6 +2,11 @@
 
 {
 
+  # Cursors too
+  environment.systemPackages = with pkgs; [
+    bibata-cursors
+  ];
+
   fonts = {
   fontDir.enable = true;
 

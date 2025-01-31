@@ -12,7 +12,7 @@
   ./tui/shells.nix
   ./tui/files.nix
   ./gui/browsers.nix
-  #./gui/gtk.nix
+  ./gui/gtk.nix
   ];
 
   # This value determines the home Manager release that your
