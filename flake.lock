@@ -370,11 +370,11 @@
     },
     "nvim-config": {
       "locked": {
-        "lastModified": 1738122431,
-        "narHash": "sha256-Cas28UjkaQRElTt5v0L4OVGiPubNKQqdBtgFjB9vjvc=",
+        "lastModified": 1738125560,
+        "narHash": "sha256-A+3eHny9pN4WSq6RX2SBXsv79Vl0+tebKSBoCJGfuvQ=",
         "owner": "CaffeinatedCup",
         "repo": "nvim-dotfiles",
-        "rev": "307aa8692c8d1f17cdcd1764fe23844ac6d880f3",
+        "rev": "3c35b779571caee76b582e35e6c3d31c2fd45446",
         "type": "github"
       },
       "original": {
