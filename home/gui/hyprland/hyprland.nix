@@ -39,6 +39,7 @@
     swaybg
     rofi-wayland
     wl-clipboard
+    nwg-displays
   ];
 
   services.cliphist = {
