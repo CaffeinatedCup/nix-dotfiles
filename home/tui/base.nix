@@ -5,8 +5,11 @@
 
   programs.git = {
     enable = true;
-    userName = "ChineseFriend101";
+    userName = "CaffeinatedCup";
     userEmail = "z.degidio159@gmail.com";
+    extraConfig = {
+      pull.rebase = false;
+    };
   };
 
   # starship - an customizable prompt for any shell
