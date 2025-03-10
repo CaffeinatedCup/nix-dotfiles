@@ -4,6 +4,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Applet for waybar tray
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
+  ];
+
   # Sets iwd as the backend because wpa supplicant seems to disconnect
   networking.networkmanager.wifi.backend = "iwd";
   networking.wireless.iwd.enable = true;

@@ -40,6 +40,12 @@
     rofi-wayland
     wl-clipboard
     nwg-displays
+    grim
+    slurp
+    # These bottom three are apps, need to move them
+    arduino
+    okular
+    discord
   ];
 
   services.cliphist = {
