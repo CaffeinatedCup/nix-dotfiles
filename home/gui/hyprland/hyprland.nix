@@ -42,9 +42,8 @@
     nwg-displays
     grim
     slurp
-    # These bottom three are apps, need to move them
+    # These bottom two are apps, need to move them
     arduino
-    okular
     discord
   ];
 
