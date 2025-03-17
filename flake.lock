@@ -20,11 +20,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741934125,
-        "narHash": "sha256-qwI47l3aKXRpDvmCKDbLV70iVfAqhpuKqT7qYHA4KJk=",
+        "lastModified": 1742213273,
+        "narHash": "sha256-0l0vDb4anfsBu1rOs94bC73Hub+xEivgBAo6QXl2MmU=",
         "owner": "hyprwm",
         "repo": "aquamarine",
-        "rev": "bea48d0bbe15fb3d758a8b6be865836c97056575",
+        "rev": "484b732195cc53f4536ce4bd59a5c6402b1e7ccf",
         "type": "github"
       },
       "original": {
@@ -107,11 +107,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738664950,
-        "narHash": "sha256-xIeGNM+iivwVHkv9tHwOqoUP5dDrtees34bbFKKMZYs=",
+        "lastModified": 1742215578,
+        "narHash": "sha256-zfs71PXVVPEe56WEyNi2TJQPs0wabU4WAlq0XV7GcdE=",
         "owner": "hyprwm",
         "repo": "hyprcursor",
-        "rev": "7c6d165e1eb9045a996551eb9f121b6d1b30adc3",
+        "rev": "2fd36421c21aa87e2fe3bee11067540ae612f719",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1742161820,
-        "narHash": "sha256-MURJd3lgE1EGwBmJRAzk+AIzv84HUt1xla9XSy1BZMs=",
+        "lastModified": 1742223160,
+        "narHash": "sha256-lExsJAtqhTITVBRuRoWklddFekm5CO+nrS2sxG4rsIA=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "22154fa272201950a3d37e2a40d9dc3a9cc92329",
+        "rev": "011d7ccb91081ff99f184564ea38d1b9e543a99c",
         "type": "github"
       },
       "original": {
@@ -370,17 +370,17 @@
     },
     "nvim-config": {
       "locked": {
-        "lastModified": 1742182913,
-        "narHash": "sha256-33CXQIxoeKjaK00RhuNuxrd3GC5ZNF0PP20B0kWDWwI=",
-        "owner": "CaffeinatedCup",
-        "repo": "nvim-dotfiles",
-        "rev": "253e4d11637ac2746b84794bdd83b55c6386afa1",
-        "type": "github"
+        "lastModified": 1742233570,
+        "narHash": "sha256-XCvurF1bDP3UXM6K062AX7sd8cJK4DkH7oegpMLN5CI=",
+        "ref": "refs/heads/main",
+        "rev": "d6d9429d02428771f4c35d63b6e4e15542f64955",
+        "revCount": 13,
+        "type": "git",
+        "url": "file:///home/zack/nvim-dotfiles"
       },
       "original": {
-        "owner": "CaffeinatedCup",
-        "repo": "nvim-dotfiles",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/zack/nvim-dotfiles"
       }
     },
     "pre-commit-hooks": {
@@ -393,11 +393,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741379162,
-        "narHash": "sha256-srpAbmJapkaqGRE3ytf3bj4XshspVR5964OX5LfjDWc=",
+        "lastModified": 1742058297,
+        "narHash": "sha256-b4SZc6TkKw8WQQssbN5O2DaCEzmFfvSTPYHlx/SFW9Y=",
         "owner": "cachix",
         "repo": "git-hooks.nix",
-        "rev": "b5a62751225b2f62ff3147d0a334055ebadcd5cc",
+        "rev": "59f17850021620cd348ad2e9c0c64f4e6325ce2a",
         "type": "github"
       },
       "original": {
