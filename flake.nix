@@ -14,12 +14,10 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim
-    # Remember to uncomment when done editing neovim config
-    # nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
+    nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
   };
 
-  # add back in "nvim-config"
-  outputs = { nixpkgs, home-manager, ... }@inputs :
+  outputs = { nixpkgs, home-manager, nvim-config, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -81,7 +79,7 @@
               imports = [
                 ./home/home.nix
               ];
-                # xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
+                xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
             };
           }
         ];
