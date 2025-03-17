@@ -14,7 +14,8 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim
-    nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
+    # Remember to uncomment when done editing neovim config
+    # nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
   };
 
   outputs = { nixpkgs, home-manager, nvim-config, ... }@inputs :
