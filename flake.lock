@@ -368,21 +368,6 @@
         "type": "github"
       }
     },
-    "nvim-config": {
-      "locked": {
-        "lastModified": 1742233570,
-        "narHash": "sha256-XCvurF1bDP3UXM6K062AX7sd8cJK4DkH7oegpMLN5CI=",
-        "ref": "refs/heads/main",
-        "rev": "d6d9429d02428771f4c35d63b6e4e15542f64955",
-        "revCount": 13,
-        "type": "git",
-        "url": "file:///home/zack/nvim-dotfiles"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///home/zack/nvim-dotfiles"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -410,8 +395,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "nixpkgs": "nixpkgs",
-        "nvim-config": "nvim-config"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
