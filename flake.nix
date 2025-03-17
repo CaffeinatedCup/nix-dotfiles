@@ -18,7 +18,8 @@
     # nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
   };
 
-  outputs = { nixpkgs, home-manager, nvim-config, ... }@inputs :
+  # add back in "nvim-config"
+  outputs = { nixpkgs, home-manager, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -80,7 +81,7 @@
               imports = [
                 ./home/home.nix
               ];
-              xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
+                # xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
             };
           }
         ];
