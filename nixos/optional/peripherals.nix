@@ -33,5 +33,6 @@
     # Sound related packages
     environment.systemPackages = with pkgs; [
       pamixer
+      pavucontrol
     ];
 }

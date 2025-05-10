@@ -2,7 +2,7 @@
   description = "Zack's NixOS configuration";
 
   inputs = {
-    # Nix packages (unstable and latest stable)
+    # Nix packages (unstable)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manger
@@ -14,10 +14,11 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim
-    nvim-config.url = "github:CaffeinatedCup/nvim-dotfiles";
+    nvim-config.url = "github:CaffeinatedCup/nvim-config";
   };
 
-  outputs = { nixpkgs, home-manager, nvim-config, ... }@inputs :
+  # Readd nvim-config below
+  outputs = { nixpkgs, home-manager, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -79,7 +80,7 @@
               imports = [
                 ./home/home.nix
               ];
-                xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
+                # xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
             };
           }
         ];

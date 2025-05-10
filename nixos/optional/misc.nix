@@ -2,6 +2,9 @@
 
 {
   # Random packages for personal use
+
+  programs.thunderbird.enable = true;
+
   environment.systemPackages = with pkgs; [
     gimp # FOSS photoshop
     blender # 3D modeling
