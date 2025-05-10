@@ -1,5 +1,3 @@
-{ pkgs, config, inputs, ... }:
-
 {
   home.username = "zack";
   home.homeDirectory = "/home/zack";
@@ -7,12 +5,12 @@
   imports = [
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
-  ./editors/base.nix
   ./tui/base.nix
   ./tui/shells.nix
   ./tui/files.nix
   ./gui/browsers.nix
   ./gui/gtk.nix
+  ./editors/base.nix
   ];
 
   # This value determines the home Manager release that your

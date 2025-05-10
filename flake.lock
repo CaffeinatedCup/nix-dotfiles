@@ -78,11 +78,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746798521,
-        "narHash": "sha256-axfz/jBEH9XHpS7YSumstV7b2PrPf7L8bhWUtLBv3nA=",
+        "lastModified": 1746892839,
+        "narHash": "sha256-0b9us0bIOgA1j/s/6zlxVyP3m97yAh0U+YwKayJ6mmU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e95a7c5b6fa93304cd2fd78cf676c4f6d23c422c",
+        "rev": "12e67385964d9c9304daa81d0ad5ba3b01fdd35e",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1746825381,
-        "narHash": "sha256-q//4N6ZoN6eBelgzUheQ07Oj6UilDjAOld0eKjnXQd0=",
+        "lastModified": 1746898286,
+        "narHash": "sha256-Mmdlj9Gnq4HjwOn5RuxHCZKsX73oDlVJwWJ1MPbncl4=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "60cd5b7a48af4a23717201d70395161a3bb4ab24",
+        "rev": "f58bb72d3a300dc482e9dc934101790c8707667d",
         "type": "github"
       },
       "original": {
@@ -367,6 +367,21 @@
         "type": "github"
       }
     },
+    "nixCats_2": {
+      "locked": {
+        "lastModified": 1745981676,
+        "narHash": "sha256-KGkNQbZaX+1KKBjUoltOby36+rH2CPNLFpm1blZ5Li4=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "a4b78fc624b31b68536cdead4699c27bcb9e655a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1746663147,
@@ -401,15 +416,15 @@
     },
     "nvim-config": {
       "inputs": {
-        "nixCats": "nixCats",
+        "nixCats": "nixCats_2",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1746845526,
-        "narHash": "sha256-8LBHu2hZj/l+JZnK28BgFeQqavGpeL+HMyqYy+RnwJ0=",
+        "lastModified": 1746896443,
+        "narHash": "sha256-KRTVgaCjc5rRzjPvwpMVEB/lHOlzYE/ntSWUEilA/h0=",
         "owner": "CaffeinatedCup",
         "repo": "nvim-config",
-        "rev": "035c45d2406e8bbd19b875d6b7b43620fa93770d",
+        "rev": "b40d119e640acfdf5a0561040bcf8825615a1b03",
         "type": "github"
       },
       "original": {
@@ -445,6 +460,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
         "nvim-config": "nvim-config"
       }
