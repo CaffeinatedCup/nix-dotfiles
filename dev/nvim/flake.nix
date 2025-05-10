@@ -1,4 +1,6 @@
 {
+  description = "For editing nvim config without having to push every change";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
@@ -18,7 +20,6 @@
         stylua              # Lua formatter
       ];
       shellHook = ''
-        echo "*NVIM DEV*"
       '';
     };
   };

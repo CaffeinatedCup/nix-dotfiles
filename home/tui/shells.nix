@@ -11,8 +11,13 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      nvim-dev = "nvim -u /home/zack/nvim-dotfiles/init.lua";
+    };
+
     initExtra = "
-      fastfetch";
+      fastfetch
+      ";
   };
 
   programs.bash = {
@@ -22,9 +27,5 @@
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
     '';
-
-    # set some aliases, feel free to add more or remove some
-    shellAliases = {
-    };
   };
 }
