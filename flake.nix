@@ -13,16 +13,11 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    # NixCats (nvim package manager)
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
-    nixCats.inputs.nixpkgs.follows = "nixpkgs";
-
-
     # Neovim
     nvim-config.url = "github:CaffeinatedCup/nvim-config";
   };
 
-  outputs = { nixpkgs, home-manager, nvim-config, nixCats, ... }@inputs :
+  outputs = { nixpkgs, home-manager, ... }@inputs :
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; in {
@@ -80,6 +75,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+	    home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
