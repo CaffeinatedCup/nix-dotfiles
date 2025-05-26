@@ -2,13 +2,6 @@
 
 {
 
-  # Neovim
-  #programs.neovim = {
-   # enable = true;
-   # defaultEditor = true;
-   # package = inputs.nvim-config.packages.${pkgs.system}.nvim;
-   # };
-
   # Emacs program and daemon
   programs.emacs.enable = true;
   services.emacs.enable = true;
