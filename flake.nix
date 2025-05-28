@@ -15,6 +15,9 @@
 
     # Neovim
     nvim-config.url = "github:CaffeinatedCup/nvim-config";
+
+    # Zen Browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs :
@@ -80,7 +83,6 @@
               imports = [
                 ./home/home.nix
               ];
-                 # xdg.configFile."nvim".source = "${inputs.nvim-config}/.";
             };
           }
         ];

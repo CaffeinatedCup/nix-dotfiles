@@ -11,12 +11,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    shellAliases = {
-      nvim-dev = "nvim -u /home/zack/nvim-dotfiles/init.lua";
-    };
-
-    initExtra = "
+    initContent = "
       fastfetch
+      export EDITOR=nvim
       ";
   };
 

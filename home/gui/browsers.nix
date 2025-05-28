@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   # Browsers config packages
@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     brave
     gcc #must move
+    inputs.zen-browser.packages."${system}".beta-unwrapped
   ];
 
 }
