@@ -3,31 +3,8 @@
 {
   # Git, emulators, and rice stuff
 
-  programs.git = {
-    enable = true;
-    userName = "CaffeinatedCup";
-    userEmail = "z.degidio159@gmail.com";
-    extraConfig = {
-      pull.rebase = false;
-    };
-  };
-
-  # starship - an customizable prompt for any shell
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    # custom settings
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = true;
-    };
-  };
 
   ## All these are programs I want but have yet to configure
-
-  programs.tmux.enable = true;
 
   programs.kitty = {
     
@@ -42,16 +19,6 @@
 
   };
 
-  programs.alacritty.enable = true;
-
-  # cd replacement
-  programs.zoxide.enable = true;
-  # cat replacement
-  programs.bat.enable = true;
-  # ls replacement
-  programs.eza.enable = true;
-  # git ui for terminal
-  programs.lazygit.enable = true;
 
   home.packages = with pkgs; [
 

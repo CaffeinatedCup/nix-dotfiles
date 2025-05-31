@@ -8,7 +8,6 @@
     # add custom lf commands here too
   };
 
-  programs.yazi.enable = true;
 
   programs.newsboat = {
     enable = true;
