@@ -7,12 +7,12 @@
   imports = [
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
-  ./tui/base.nix
-  ./tui/shells.nix
-  ./tui/files.nix
+  ./cli/base.nix
+  ./cli/shells.nix
+  ./cli/files.nix
   ./gui/browsers.nix
   ./gui/gtk.nix
-  ./editors/base.nix
+  ./cli/programs.nix
   ];
 
   # This value determines the home Manager release that your
