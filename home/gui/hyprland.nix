@@ -4,25 +4,6 @@
   wayland.windowManager.hyprland = {
   enable = true;
   xwayland.enable = true;
-  extraConfig = builtins.readFile ./conf/hyprland.conf;
-  };
-
-  xdg.configFile = {
-    "/waybar" = {
-      source = ./conf/waybar;
-      recursive = true;
-    };
-    
-    "/.config/hypr" = {
-      source = ./conf;
-      recursive = true;
-    };
-
-    "/.config/rofi" = {
-      source = ./conf/rofi;
-      recursive = true;
-    };
-
   };
 
 
@@ -42,9 +23,6 @@
     nwg-displays
     grim
     slurp
-    # These bottom two are apps, need to move them
-    arduino
-    discord
   ];
 
   services.cliphist = {

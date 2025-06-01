@@ -5,11 +5,9 @@
   home.homeDirectory = "/home/zack";
 
   imports = [
-  ./gui/hyprland/hyprland.nix
-  ./gui/xdg.nix
-  ./gui/apps.nix
-  ./gui/gtk.nix
+  ./gui
   ./cli
+  ./files.nix
   ];
 
   # This value determines the home Manager release that your

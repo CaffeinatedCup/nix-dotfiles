@@ -7,7 +7,7 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      include = "~/nix-dotfiles/home/gui/hyprland/conf/kitty/tokyo-night.conf";
+      include = "~/nix-dotfiles/home/files/kitty/tokyo-night.conf";
       
       background_opacity = "0.93";
       enable_audio_bell = false;
@@ -29,12 +29,17 @@
     gimp # FOSS photoshop
     blender # 3D modeling
     anki # Flashcards for language learning
+    arduino
+    discord
     obsidian
     memos
     (calibre.override {
       unrarSupport = true;
     })
 
+    # GUI file browsers
+    thunderbird
+    pcmanfm
   ];
 
 }
