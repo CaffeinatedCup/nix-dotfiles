@@ -11,6 +11,17 @@
     };
   };
 
+
+  # RSS reader, might configure later
+  programs.newsboat = {
+    enable = true;
+    urls = [
+      {
+        url = "https://techcrunch.com/feed";
+      }
+    ];
+  };
+
   home.packages = with pkgs; [
 
   # Editors
@@ -22,11 +33,15 @@
   tmux
   alacritty
   lazygit
-  yazi
 
 
   zoxide
   bat
   eza
+
+
+  # File browsing
+  yazi
+  pcmanfm
   ];
 }
