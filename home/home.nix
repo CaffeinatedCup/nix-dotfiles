@@ -7,7 +7,7 @@
   imports = [
   ./gui/hyprland/hyprland.nix
   ./gui/xdg.nix
-  ./gui/browsers.nix
+  ./gui/apps.nix
   ./gui/gtk.nix
   ./cli
   ];
