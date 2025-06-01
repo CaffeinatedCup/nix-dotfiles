@@ -47,28 +47,21 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
+
+    # Essential 
      vim
      wget
      brightnessctl
      hwinfo
+     which
+     file
 
-    # archives
+    # Archives Stuff
     zip
     xz
     unzip
     p7zip
     zstd
-
-    # utils
-    jq # A lightweight and flexible command-line JSON processor
-
-    # networking tools
-    socat # replacement of openbsd-netcat
-
-    # misc
-    file
-    which
-    tree
 
   ];
 

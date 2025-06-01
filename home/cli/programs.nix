@@ -24,36 +24,32 @@
 
   home.packages = with pkgs; [
 
-  # Editors
+  # Editors & Dev Tools
   vscode-fhs
-  # Full config at github/CaffeinatedCup/nvim-config
-  inputs.nvim-config.packages.${system}.nvim
-
-  # Just packages for now, but might configure later
+  inputs.nvim-config.packages.${system}.nvim # full config in my nvim-config repo
   tmux
   lazygit
-
-
-  zoxide
-  bat
-  eza
-
-
-  # File browsing
-  yazi
-  pcmanfm
-
-
-  #devtools
   gcc
   gnupg
   gnumake
 
 
+  # CLI Enhancement
+  yazi # the goat!
+  zoxide
+  bat
+  eza
+  fd
+  fzf
+  ripgrep
+  tokei
+  tree
+
+
   # Rice
-  pipes # Random pipes
-  fastfetch # Neofetch replacement but faster
-  pfetch # Minimal fetch
+  pipes
+  fastfetch
+  pfetch
   cowsay
   cmatrix
   cbonsai
@@ -62,32 +58,25 @@
   cava
 
 
-  # Need to organize
-  fd # makes file indexing fire
-  fzf # A command-line fuzzy finder
-  ripgrep # recursively searches directories for a regex pattern
-  wev # Wayland even viewer (for keybinds)
-
-  yq-go # yaml processor https://github.com/mikefarah/yq
-
-  # nix related
-  # it provides the command `nom` works just like `nix`
-  # with more details log output
-  nix-output-monitor
-  # Allows you to see changes in nix stuff
-  nvd
-
-  btop  # replacement of htop/nmon
-  iotop # io monitoring
-  iftop # network monitoring
-  tokei
-
-  # system call monitoring
+  # System Call Monitoring
   strace # system call monitoring
   ltrace # library call monitoring
   lsof # list open files
+  btop  # replacement of htop/nmon
+  iotop # io monitoring
+  iftop # network monitoring
 
-  # system tools
+
+  # Wayland Debugging
+  wev # Wayland even viewer (for keybinds)
+
+
+  # Nix Tools
+  nix-output-monitor
+  nvd
+
+
+  # System Tools
   sysstat
   lm_sensors # for `sensors` command
   ethtool
