@@ -56,6 +56,7 @@
   fortune
   lolcat
   cava
+  figlet
 
 
   # System Call Monitoring
