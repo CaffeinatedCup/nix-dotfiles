@@ -26,6 +26,9 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
 
 
+    kdePackages.kdenlive
+    libreoffice
+    obs-studio
     gimp # FOSS photoshop
     blender # 3D modeling
     anki # Flashcards for language learning

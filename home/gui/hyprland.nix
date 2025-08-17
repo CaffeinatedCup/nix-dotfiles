@@ -4,6 +4,8 @@
   wayland.windowManager.hyprland = {
   enable = true;
   xwayland.enable = true;
+  extraConfig = "#managed via xdg under files";
+  # Empty config to silence the warning cuz I manage the conf through xdg
   };
 
 
