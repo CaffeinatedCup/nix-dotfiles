@@ -78,6 +78,7 @@
 
 
   # System Tools
+  mpv #media player
   sysstat
   lm_sensors # for `sensors` command
   ethtool

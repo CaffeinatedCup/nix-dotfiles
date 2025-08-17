@@ -21,37 +21,23 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs :
-  let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system}; in {
+  {
     
 
     ## My nix configs ##
     nixosConfigurations = {
 
-        ## thinker, the old thinkpad ##
-        thinker = nixpkgs.lib.nixosSystem {
+      raspberry-pi = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
         modules = [
-          ./hosts/thinker/default.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zack = {
-              imports = [
-                ./home/home.nix
-              ];
-            };
-          }
-
+          ./hosts/raspberry-pi/default.nix
         ];
-        specialArgs = {inherit inputs; };
-       };
+      };
 
 
         ## liberator, the darter pro 10 ##
         liberator = nixpkgs.lib.nixosSystem {
-
+        system = "x86_64-linux";
         modules = [
           ./hosts/liberator/default.nix
           home-manager.nixosModules.home-manager
@@ -71,14 +57,14 @@
 
         ## parted, framework laptop  ##
         parted = nixpkgs.lib.nixosSystem {
-
+        system = "x86_64-linux";
         modules = [
           ./hosts/parted/default.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-	    home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
