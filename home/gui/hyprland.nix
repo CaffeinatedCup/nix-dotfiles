@@ -22,7 +22,7 @@
     swaybg
     rofi-wayland
     wl-clipboard
-    nwg-displays
+    #nwg-displays broken rn :(
     grim
     slurp
   ];
