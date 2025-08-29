@@ -18,6 +18,10 @@
 
     # Zen Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    # Hardware modules
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs :
@@ -27,7 +31,7 @@
     ## My nix configs ##
     nixosConfigurations = {
 
-      raspberry-pi = nixpkgs.lib.nixosSystem {
+       pie = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
           ./hosts/raspberry-pi/default.nix
