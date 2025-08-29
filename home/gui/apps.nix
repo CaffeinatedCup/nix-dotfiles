@@ -31,7 +31,7 @@
     obs-studio
     gimp # FOSS photoshop
     blender # 3D modeling
-    anki # Flashcards for language learning
+    ### broken rn add back later ## anki # Flashcards for language learning
     arduino
     discord
     obsidian
