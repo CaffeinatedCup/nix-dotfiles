@@ -10,7 +10,9 @@
   nixpkgs.config.allowBroken = true;
 
   programs.zsh.enable = true;
-
+  
+  # Reorganize this, allows for cross compiling
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
   # Users
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
@@ -56,6 +58,8 @@
      hwinfo
      which
      file
+     nixos-generators
+     nixos-anywhere
 
     # Archives Stuff
     zip

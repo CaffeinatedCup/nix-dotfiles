@@ -25,6 +25,8 @@
   home.packages = with pkgs; [
 
   # Editors & Dev Tools
+  python313
+  python313Packages.pip
   vscode-fhs
   inputs.nvim-config.packages.${system}.nvim # full config in my nvim-config repo
   tmux
