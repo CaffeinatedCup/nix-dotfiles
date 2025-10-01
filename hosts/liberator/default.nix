@@ -6,7 +6,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/configuration.nix
     ../../nixos/core/network.nix
     ../../nixos/optional/server.nix
   ];
