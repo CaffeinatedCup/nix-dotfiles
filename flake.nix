@@ -34,7 +34,8 @@
        pie = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
-          ./hosts/raspberry-pi/default.nix
+          ./hosts/pie/default.nix
+          inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
       };
 
@@ -44,16 +45,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/liberator/default.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zack = {
-              imports = [
-                ./home/home.nix
-              ];
-            };
-          }
         ];
         specialArgs = {inherit inputs; };
       };

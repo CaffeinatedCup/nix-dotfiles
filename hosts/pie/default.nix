@@ -1,7 +1,4 @@
-{ config, pkgs, inputs, ... }: {
-  imports = [
-    inputs.nixos-hardware.nixosModules.raspberry-pi-4
-  ];
+{ config, pkgs, ... }: {
 
   networking.hostName = "raspberry-pi";
   system.stateVersion = "24.05";
@@ -17,5 +14,6 @@
   };
 
   security.sudo.enable = true;
+
 }
 

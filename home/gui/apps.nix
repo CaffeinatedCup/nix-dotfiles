@@ -26,6 +26,7 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
 
 
+    logisim
     kdePackages.kdenlive
     libreoffice
     obs-studio
