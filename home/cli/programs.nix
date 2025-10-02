@@ -37,8 +37,7 @@
 
 
   # CLI Enhancement
-  yazi # the goat!
-  zoxide
+  yazi
   bat
   eza
   fd

@@ -16,6 +16,11 @@
     };
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -32,10 +37,9 @@
       export FASTFETCH_RAN=1
       fastfetch
 
-      export EDITOR=nvim
     fi
-      '';
-
+      export EDITOR=nvim
+    '';
     };
 
   programs.bash = {
