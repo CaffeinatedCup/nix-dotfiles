@@ -21,15 +21,22 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      ls="eza";
+      ll="eza -l";
+      lt="eza --tree";
+      la="eza -la";
+    };
     initContent = ''
     if [[ $- == *i* ]] && [[ -z "$IN_NIX_SHELL" ]] && [[ -z "$FASTFETCH_RAN" ]]; then
       export FASTFETCH_RAN=1
       fastfetch
-    fi
 
       export EDITOR=nvim
+    fi
       '';
-  };
+
+    };
 
   programs.bash = {
     enable = true;
