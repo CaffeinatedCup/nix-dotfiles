@@ -8,14 +8,13 @@
     ./hardware-configuration.nix
     ../../nixos/core/network.nix
     ../../nixos/optional/server.nix
-    ../../home/cli/shells.nix
   ];
 
   networking.hostName = "liberator";
 
   hardware.system76.enableAll = true;
 
-  programs.zsh.ennable = true;
+  programs.zsh.enable = true;
   programs.starship.enable = true;
   
   # UEFI boot
