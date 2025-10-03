@@ -36,7 +36,6 @@
     arduino
     discord
     obsidian
-    memos
     (calibre.override {
       unrarSupport = true;
     })
