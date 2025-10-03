@@ -60,6 +60,7 @@
      file
      nixos-generators
      nixos-anywhere
+     git
 
     # Archives Stuff
     zip

@@ -16,6 +16,9 @@
 
   programs.zsh.enable = true;
   programs.starship.enable = true;
+  programs.zsh.shellInit = ''
+    export TERM=xterm
+  '';
   
   # UEFI boot
   boot.loader.grub.enable = true;
