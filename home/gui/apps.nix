@@ -26,6 +26,7 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
 
 
+    pdfarranger
     logisim
     kdePackages.kdenlive
     libreoffice
