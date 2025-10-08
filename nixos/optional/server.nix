@@ -1,10 +1,26 @@
-{ inpputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-  memos
-  actual-server
+  docker-compose
   ];
 
+  virtualization.docker.enable = true;
+
+  users.users.zack.extraGroups = [ "docker" ];
+
+  services.memos = {
+    enable = true;
+    port = 8081;
+    };
+
+  services.actual = {
+    enable = true;
+    #default port is 3000
+  };
+
+  services.vaultwarden = {
+    enable = true;
+  };
 
 }
