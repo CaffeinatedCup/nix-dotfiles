@@ -9,6 +9,14 @@
 
   services.memos = {
     enable = true;
+    setting = {
+        MEMOS_MODE = "prod";
+        MEMOS_ADDR = "0.0.0.0";
+        MEMOS_PORT = "5230";
+        MEMOS_DATA = /var/lib/memos;
+        MEMOS_DRIVER = "sqlite";
+        MEMOS_INSTANCE_URL = "http://192.168.1.162:5230";
+    };
   };
 
   services.actual = {
