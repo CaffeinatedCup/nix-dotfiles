@@ -8,8 +8,7 @@
     ./hardware-configuration.nix
     ../../nixos/core/network.nix
     ../../nixos/optional/server.nix
-    ../..nixos/core/nix.nix
-    ../..nixos/core/networking.nix
+    ../../nixos/core/nix.nix
   ];
 
   networking.hostName = "liberator";
