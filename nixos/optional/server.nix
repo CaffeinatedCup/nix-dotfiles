@@ -11,7 +11,6 @@
 
   services.memos = {
     enable = true;
-    port = 8081;
     };
 
   services.actual = {
