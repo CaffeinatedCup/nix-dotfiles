@@ -5,13 +5,11 @@
   docker-compose
   ];
 
-  virtualization.docker.enable = true;
-
-  users.users.zack.extraGroups = [ "docker" ];
+  virtualisation.docker.enable = true;
 
   services.memos = {
     enable = true;
-    };
+  };
 
   services.actual = {
     enable = true;
