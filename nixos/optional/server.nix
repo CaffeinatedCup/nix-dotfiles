@@ -20,4 +20,7 @@
     enable = true;
   };
 
+  #open firewall for memos
+  networking.firewall.allowedTCPPorts = [ 5230 ];
+
 }
