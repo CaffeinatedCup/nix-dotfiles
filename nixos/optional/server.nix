@@ -9,7 +9,7 @@
 
   services.memos = {
     enable = true;
-    setting = {
+    settings = {
         MEMOS_MODE = "prod";
         MEMOS_ADDR = "0.0.0.0";
         MEMOS_PORT = "5230";
