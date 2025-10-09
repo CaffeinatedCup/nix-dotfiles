@@ -21,7 +21,10 @@
 
   services.actual = {
     enable = true;
-    #default port is 3000
+    settings = {
+      hostname = "0.0.0.0";
+    };
+    #default port is 5006
   };
 
   services.vaultwarden = {
@@ -29,6 +32,6 @@
   };
 
   #open firewall for memos
-  networking.firewall.allowedTCPPorts = [ 5230 ];
+  networking.firewall.allowedTCPPorts = [ 5230 5006 ];
 
 }
