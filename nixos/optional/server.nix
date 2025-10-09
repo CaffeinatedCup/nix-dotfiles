@@ -32,6 +32,6 @@
   };
 
   #open firewall for memos
-  networking.firewall.allowedTCPPorts = [ 5230 5006 ];
+  networking.firewall.allowedTCPPorts = [ 5230 3000 ];
 
 }
