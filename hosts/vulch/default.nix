@@ -12,9 +12,10 @@
 
   programs.zsh.enable = true;
   programs.starship.enable = true;
-  programs.zsh.shellInit = ''
-    export TERM=xterm-256color
-  '';
+
+  environment.variables = {
+    TERM = "xterm-256color";
+  };
   
   # UEFI boot
   boot.loader.grub.enable = true;

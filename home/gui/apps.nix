@@ -8,7 +8,6 @@
     shellIntegration.enableZshIntegration = true;
     settings = {
       include = "~/nix-dotfiles/home/files/kitty/tokyo-night.conf";
-      
       background_opacity = "0.93";
       enable_audio_bell = false;
       };

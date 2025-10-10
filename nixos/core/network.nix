@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     socat
+    kitty
   ];
 
   # Sets iwd as the backend because wpa supplicant seems to disconnect
