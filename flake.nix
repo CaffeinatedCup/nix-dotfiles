@@ -49,6 +49,13 @@
         specialArgs = {inherit inputs; };
       };
 
+        vulch = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/vulch/default.nix
+        ];
+        specialArgs = {inherit inputs; };
+      };
 
         ## parted, framework laptop  ##
         parted = nixpkgs.lib.nixosSystem {
