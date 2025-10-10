@@ -23,9 +23,6 @@
 
   services.tailscale = {
     enable = true;
-    useRoutingFeatures = if builtins.elem config.networking.hostName [ "vulch" "liberator" ]
-      then "both"
-      else "none";
     };
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 41641 ];
