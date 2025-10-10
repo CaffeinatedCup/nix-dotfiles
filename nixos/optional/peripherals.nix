@@ -32,7 +32,7 @@
 
     # Sound related packages
     environment.systemPackages = with pkgs; [
-      #pamixer
+      pamixer
       pavucontrol
     ];
 }
