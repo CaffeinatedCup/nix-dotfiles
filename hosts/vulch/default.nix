@@ -13,7 +13,7 @@
   programs.zsh.enable = true;
   programs.starship.enable = true;
   programs.zsh.shellInit = ''
-    export TERM=xterm
+    export TERM=xterm-256color
   '';
   
   # UEFI boot
