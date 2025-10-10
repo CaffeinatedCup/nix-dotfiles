@@ -11,7 +11,15 @@
   networking.hostName = "vulch";
 
   programs.zsh.enable = true;
-  programs.starship.enable = true;
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      line_break.disabled = true;
+      add_newLine = false;
+    };
+  };
 
   environment.variables = {
     TERM = "xterm-256color";
