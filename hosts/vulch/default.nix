@@ -14,7 +14,6 @@
 
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
       line_break.disabled = true;
       add_newLine = false;
