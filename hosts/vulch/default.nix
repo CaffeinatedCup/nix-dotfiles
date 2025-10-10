@@ -16,7 +16,7 @@
     enable = true;
     settings = {
       line_break.disabled = true;
-      add_newLine = false;
+      add_newline = false;
     };
   };
 

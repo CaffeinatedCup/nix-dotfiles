@@ -15,7 +15,13 @@
   hardware.system76.enableAll = true;
 
   programs.zsh.enable = true;
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings = {
+      line_break.disabled = true;
+      add_newline = false;
+    };
+  };
   
   environment.variables = {
     TERM = "xterm-256color";
