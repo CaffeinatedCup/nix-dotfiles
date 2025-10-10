@@ -62,7 +62,7 @@
 
   # System Call Monitoring
   strace # system call monitoring
-  ltrace # library call monitoring
+  #ltrace # library call monitoring
   lsof # list open files
   btop  # replacement of htop/nmon
   iotop # io monitoring

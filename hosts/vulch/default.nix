@@ -5,7 +5,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/core/
+    ../../nixos/core
   ];
 
   networking.hostName = "vulch";

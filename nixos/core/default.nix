@@ -2,10 +2,8 @@
 
 {
   imports = [
-    ./fonts.nix
     ./network.nix
     ./locale.nix
     ./nix.nix
-    ./desktop.nix
   ];
 }
