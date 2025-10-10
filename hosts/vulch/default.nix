@@ -1,18 +1,14 @@
-## Liberator ##
-## System76 Darter Pro with NixOS and Windows ##
+# vultr vps for webserver
 
 { inputs, pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/optional/server.nix
     ../../nixos/core/
   ];
 
-  networking.hostName = "liberator";
-
-  hardware.system76.enableAll = true;
+  networking.hostName = "vulch";
 
   programs.zsh.enable = true;
   programs.starship.enable = true;
