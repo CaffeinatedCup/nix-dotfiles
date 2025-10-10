@@ -20,7 +20,7 @@
     hyprpicker #color picker
     mako #notification daemon
     swaybg
-    rofi-wayland
+    rofi
     wl-clipboard
     #nwg-displays broken rn :(
     grim

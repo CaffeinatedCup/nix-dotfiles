@@ -4,7 +4,7 @@
 
   imports =
     [
-      ./core/default.nix
+      ./core
       ./optional/greetd.nix
       ./optional/peripherals.nix
       ./optional/gaming.nix

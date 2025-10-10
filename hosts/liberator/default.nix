@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixos/optional/server.nix
-    ../../nixos/core/
+    ../../nixos/core
   ];
 
   networking.hostName = "liberator";
