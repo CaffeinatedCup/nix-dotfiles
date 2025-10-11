@@ -64,6 +64,7 @@
      nixos-generators
      nixos-anywhere
      git
+     parted
 
     # Archives Stuff
     zip
