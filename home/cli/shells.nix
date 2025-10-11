@@ -3,6 +3,19 @@
 {
 
   # Note: Default shell set in nix.nix
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "vulch" = {
+        hostname = "144.202.12.228";
+        user = "zack";
+      };
+      "liberator" = {
+        hostname = "192.168.1.162";
+        user = "zack";
+      };
+    };
+  };
 
   programs.starship = {
     enable = true;
