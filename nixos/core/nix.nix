@@ -25,9 +25,10 @@
     ];
   };
 
-  # Cachix stuff
   nix.settings = {
     builders-use-substitutes = true;
+    trusted-users = [ "root" "zack" ];
+    require-sigs = false;
     extra-substituters = [
       "https://cache.nixos.org/"
       "https://hyprland.cachix.org"

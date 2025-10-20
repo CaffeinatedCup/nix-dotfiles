@@ -6,6 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixos/core
+    ../../nixos/optional/traefik.nix
   ];
 
   networking.hostName = "vulch";
