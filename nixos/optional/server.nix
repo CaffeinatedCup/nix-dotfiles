@@ -24,7 +24,6 @@
     settings = {
       hostname = "0.0.0.0";
     };
-    #default port is 5006
   };
 
   services.vaultwarden = {

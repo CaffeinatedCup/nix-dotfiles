@@ -8,7 +8,7 @@
       entryPoints = {
         web = {
           address = ":80";
-          http.redirections.entryPoints = {
+          http.redirections.entrypoint = {
             to = "websecure";
             scheme = "https";
           };
@@ -29,24 +29,24 @@
     dynamicConfigOptions.http = {
       routers = {
         memos = {
-          rule = "Host('memos.zacharydegidio.com')";
+          rule = "Host(`memos.zacharydegidio.com`)";
           service = "memos";
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
 
         };
         actual = {
-          rule = "Host('actual.zacharydegidio.com')";
+          rule = "Host(`actual.zacharydegidio.com`)";
           service = "actual";
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
       };
       services.memos.loadBalancer.servers = [
-        { url = "https://192.168.1.162:5230"; }
+        { url = "http://100.71.212.63:5230"; }
       ];
       services.actual.loadBalancer.servers = [
-        { url = "https://192.168.1.162:5006"; }
+        { url = "http://100.71.212.63:3000"; }
       ];
     };
 

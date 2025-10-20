@@ -7,7 +7,7 @@
     enable = true;
     matchBlocks = {
       "vulch" = {
-        hostname = "144.202.12.228";
+        hostname = "140.82.6.170";
         user = "zack";
       };
       "liberator" = {
