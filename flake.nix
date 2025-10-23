@@ -76,6 +76,26 @@
         ];
         specialArgs = {inherit inputs; };
       };
+
+        #main desktop
+        geeker = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/geeker/default.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.zack = {
+              imports = [
+                ./home/home.nix
+              ];
+            };
+          }
+        ];
+        specialArgs = {inherit inputs; };
+      };
     };
   };
 }
