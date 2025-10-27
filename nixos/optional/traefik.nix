@@ -41,12 +41,22 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
+        mealie = {
+          rule = "Host(`mealie.zacharydegidio.com`)";
+          service = "mealie";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
       };
       services.memos.loadBalancer.servers = [
         { url = "http://100.71.212.63:5230"; }
       ];
       services.actual.loadBalancer.servers = [
         { url = "http://100.71.212.63:3000"; }
+      ];
+
+      services.mealie.loadBalancer.servers = [
+        { url = "http://100.71.212.63:9000"; }
       ];
     };
 
