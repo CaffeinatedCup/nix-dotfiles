@@ -26,6 +26,10 @@
     };
   };
 
+  services.mealie = {
+    enable = true;
+  };
+
   services.vaultwarden = {
     enable = true;
   };
