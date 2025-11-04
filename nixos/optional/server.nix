@@ -34,6 +34,20 @@
     enable = true;
   };
 
+  # add nextcloud
+
+  # add rmfakecloud
+
+  # add minecraft
+
+  services.nginx = {
+    enable = true;
+    virtualHosts."default" = {
+      root = "/var/www";
+      listen = [{ addr = "127.0.0.1"; port = 8080; }];
+    };
+  };
+
   #open firewall for memos
   networking.firewall.allowedTCPPorts = [ 5230 3000 ];
 
