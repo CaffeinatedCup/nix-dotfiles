@@ -47,7 +47,7 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
-        website = {
+        nginx = {
           rule = "Host(`zacharydegidio.com`)";
           service = "nginx";
           entryPoints = [ "websecure" ];
@@ -64,7 +64,7 @@
       services.mealie.loadBalancer.servers = [
         { url = "http://100.71.212.63:9000"; }
       ];
-      services.website.loadBalancer.servers = [
+      services.nginx.loadBalancer.servers = [
         { url = "http://100.71.212.63:8080"; }
       ];
     };
