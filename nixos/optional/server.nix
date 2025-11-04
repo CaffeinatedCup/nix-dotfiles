@@ -42,9 +42,10 @@
 
   services.nginx = {
     enable = true;
-    virtualHosts."default" = {
-      root = "/var/www";
-      listen = [{ addr = "127.0.0.1"; port = 8080; }];
+    virtualHosts."mywebsite" = {
+      root = "/var/www/mywebsite";
+      listen = [{ addr = "0.0.0.0"; port = 8080; }];
+      locations."/" = { index = "index.html"; };
     };
   };
 
