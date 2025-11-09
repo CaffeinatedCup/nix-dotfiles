@@ -47,6 +47,12 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
+        nextcloud = {
+          rule = "Host(`nextcloud.zacharydegidio.com`)";
+          service = "nextcloud";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
         nginx = {
           rule = "Host(`zacharydegidio.com`)";
           service = "nginx";
@@ -63,6 +69,9 @@
 
       services.mealie.loadBalancer.servers = [
         { url = "http://100.71.212.63:9000"; }
+      ];
+      services.nextcloud.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8081"; }
       ];
       services.nginx.loadBalancer.servers = [
         { url = "http://100.71.212.63:8080"; }

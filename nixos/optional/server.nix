@@ -34,7 +34,23 @@
     enable = true;
   };
 
-  # add nextcloud
+  services.nextcloud = {
+    enable = true;
+    package = pkgs.nextcloud32;
+    hostName = "nextcloud.zacharydegidio.com";
+    https = false;
+
+    config = {
+      adminpassFile = "/etc/nextcloud/admin-pass";
+      dbtype = "sqlite";
+      extraTrustedDomains = [ "nextcloud.zacharydegidio.com" ];
+      trusted_proxies = [ "100.124.164.29" ];
+      overwriteprotocol = "https";
+      overwritehost = "nextcloud.zacharydegidio.com";
+      default_phone_region = "US";
+    };
+  };
+
 
   # add rmfakecloud
 
@@ -42,10 +58,15 @@
 
   services.nginx = {
     enable = true;
-    virtualHosts."mywebsite" = {
-      root = "/var/www/mywebsite";
-      listen = [{ addr = "0.0.0.0"; port = 8080; }];
-      locations."/" = { index = "index.html"; };
+    virtualHosts = {
+      "nextcloud" = {
+        listen = [ { addr = "0.0.0.0"; port = 8081; } ]; # changed bc webserver uses 8080
+      };
+      "mywebsite" = {
+        root = "/var/www/mywebsite";
+        listen = [{ addr = "0.0.0.0"; port = 8080; }];
+        locations."/" = { index = "index.html"; };
+      };
     };
   };
 
