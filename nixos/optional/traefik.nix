@@ -71,7 +71,7 @@
         { url = "http://100.71.212.63:9000"; }
       ];
       services.nextcloud.loadBalancer.servers = [
-        { url = "http://100.71.212.63:8081"; }
+        { url = "http://100.71.212.63:80"; }
       ];
       services.nginx.loadBalancer.servers = [
         { url = "http://100.71.212.63:8080"; }
