@@ -51,7 +51,11 @@
   };
 
 
-  # add rmfakecloud
+  services.rmfakecloud = {
+  enable = true;
+  port = 8081;
+  storageUrl = "https://remark.zacharydegidio.com";
+  };
 
   # add minecraft
 

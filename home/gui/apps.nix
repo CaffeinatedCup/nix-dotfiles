@@ -25,6 +25,7 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
 
 
+    nextcloud-client
     pdfarranger
     logisim
     kdePackages.kdenlive
