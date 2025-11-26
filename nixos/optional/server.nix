@@ -32,7 +32,17 @@
 
   services.vaultwarden = {
     enable = true;
+    dbBackend = "sqlite";
+    config = {
+      ROCKET_ADDRESS = "0.0.0.0";
+      ROCKET_PORT = 8222;
+      DOMAIN = "https://vault.zacharydegidio.com";
+      SIGNUPS_ALLOWED = true;
+      ADMIN_TOKEN = "$argon2id$v=19$m=65540,t=3,p=4$xadn53Y4bnvxClYToMYwCA7ErVwtF/A23NcBRJRbufI$RGqRs/zSxbUDVf1Npt5qlmOQwh9c7haJK0Hq9XZ3Dbk";
+      LOG_FILE = "/var/lib/bitwarden_rs/access.log";
+    };
   };
+
 
   services.nextcloud = {
     enable = true;
