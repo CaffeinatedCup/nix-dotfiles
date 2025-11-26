@@ -41,6 +41,12 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
+        vaultwarden = {
+          rule = "Host(`vault.zacharydegidio.com`)";
+          service = "vaultwarden";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
         mealie = {
           rule = "Host(`mealie.zacharydegidio.com`)";
           service = "mealie";
@@ -50,6 +56,12 @@
         nextcloud = {
           rule = "Host(`nextcloud.zacharydegidio.com`)";
           service = "nextcloud";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
+        remark = {
+          rule = "Host(`remark.zacharydegidio.com`)";
+          service = "rmfakecloud";
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
@@ -66,12 +78,17 @@
       services.actual.loadBalancer.servers = [
         { url = "http://100.71.212.63:3000"; }
       ];
-
+      services.vaultwarden.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8222"; }
+      ];
       services.mealie.loadBalancer.servers = [
         { url = "http://100.71.212.63:9000"; }
       ];
       services.nextcloud.loadBalancer.servers = [
         { url = "http://100.71.212.63:80"; }
+      ];
+      services.rmfakecloud.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8081"; }
       ];
       services.nginx.loadBalancer.servers = [
         { url = "http://100.71.212.63:8080"; }
