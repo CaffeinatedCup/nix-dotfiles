@@ -25,6 +25,8 @@
     TERM = "xterm-256color";
   };
   
+  boot.tmp.useTmpfs = false;
+
   # UEFI boot
   boot.loader.grub.enable = true;
   boot.loader.grub.devices = [ "nodev" ];

@@ -35,6 +35,7 @@
     blender # 3D modeling
     ### broken rn add back later ## anki # Flashcards for language learning
     arduino
+    quickshell
     discord
     obsidian
     (calibre.override {
