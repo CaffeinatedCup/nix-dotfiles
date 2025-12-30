@@ -41,6 +41,7 @@
     (calibre.override {
       unrarSupport = true;
     })
+    ollama
 
     # GUI file browsers
     thunderbird

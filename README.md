@@ -8,4 +8,5 @@
 * Add an option in hyprland to slide around a window (like a regular desktop environment)
 * Secrets management (agenix or SOPS-nix)
 * Add lanzaboot
-* Better SSH stuff
+* switch to quickshell
+implement a theme switcher that changes color theme, background and blocks specific apps by default. (think Freedom, having a locked in theme and a creative theme)
