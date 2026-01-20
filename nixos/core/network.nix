@@ -11,6 +11,8 @@
     kitty
   ];
 
+  networking.nameservers = ["8.8.8.8" "8.8.4.4" "1.1.1.1" ];
+
   # Sets iwd as the backend because wpa supplicant seems to disconnect
   networking.networkmanager.wifi.backend = "iwd";
   networking.wireless.iwd.enable = true;
