@@ -5,6 +5,10 @@
 
   #TODO xppen drivers, logitech mouse, and maybe gui's for changing stuff like audio output
 
+  services.upower.enable = true;
+
+  services.tuned.enable = true;
+
   # Enable USB device connection
   services.udisks2.enable = true;
 

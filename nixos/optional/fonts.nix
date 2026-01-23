@@ -16,6 +16,7 @@
   jetbrains-mono
   fira-code
   material-design-icons
+  adwaita-icon-theme
   font-awesome
   nerd-fonts._0xproto
   nerd-fonts.droid-sans-mono

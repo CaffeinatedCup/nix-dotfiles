@@ -1,12 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  wayland.windowManager.hyprland = {
-  enable = true;
-  xwayland.enable = true;
-  extraConfig = "#managed via xdg under files";
+  #wayland.windowManager.hyprland = {
+  #enable = true;
+  #xwayland.enable = true;
+  #extraConfig = "#managed via xdg under files";
   # Empty config to silence the warning cuz I manage the conf through xdg
-  };
+  #};
+
 
 
   # Packages for hyprland
@@ -25,6 +26,10 @@
     #nwg-displays broken rn :(
     grim
     slurp
+    gtklock
+    swayidle
+    xwayland-satellite
+    swaybg
   ];
 
   services.cliphist = {

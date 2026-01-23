@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  #programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
+  programs.niri.enable = true;
 
     xdg.portal = {
       enable = true;
