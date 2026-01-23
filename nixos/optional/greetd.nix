@@ -11,7 +11,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --time --remember --remember-session --cmd Hyprland";
+        command = "${tuigreet} --time --remember --remember-session --cmd niri";
         user = "zack";
       };
     };

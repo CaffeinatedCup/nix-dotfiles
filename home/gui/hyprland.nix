@@ -23,6 +23,7 @@
     swaybg
     rofi
     wl-clipboard
+    librsvg
     #nwg-displays broken rn :(
     grim
     slurp

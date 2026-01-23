@@ -36,6 +36,7 @@
     gimp # FOSS photoshop
     blender # 3D modeling
     ### broken rn add back later ## anki # Flashcards for language learning
+    nwg-look
     arduino
     quickshell
     discord
