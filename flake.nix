@@ -13,6 +13,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Noctalia
+    noctalia.url = "github:noctalia-dev/noctalia-shell";
+    noctalia.inputs.nixpkgs.follows = "nixpkgs";
+
     # Neovim
     nvim-config.url = "github:CaffeinatedCup/nvim-config";
 
@@ -24,7 +28,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs :
+  outputs = { self, nixpkgs, home-manager, ... }@inputs :
   {
     
 

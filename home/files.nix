@@ -13,6 +13,8 @@
   "waybar/style.css".source = ./files/waybar/style.css;
 
   "rofi/config.rasi".source = ./files/rofi/config.rasi;
+
+  "niri/config.kdl".source = ./files/niri/config.kdl;
   };
 
 }

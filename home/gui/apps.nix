@@ -7,7 +7,7 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      include = "~/nix-dotfiles/home/files/kitty/tokyo-night.conf";
+      include = "~/.config/kitty/themes/noctalia.conf";
       background_opacity = "0.93";
       enable_audio_bell = false;
       };
@@ -19,11 +19,13 @@
 
   home.packages = with pkgs; [
     # Browsers
+    spotify
+    spicetify-cli
     brave
     firefox
     librewolf
     inputs.zen-browser.packages."${system}".beta-unwrapped
-
+    inputs.noctalia.packages."${system}".default
 
     nextcloud-client
     pdfarranger
