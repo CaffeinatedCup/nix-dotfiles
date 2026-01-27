@@ -14,19 +14,23 @@
 
   };
 
+  programs.spicetify = {
+    enable = true;
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.comfy;
+    colorScheme = "Everforest";
+  };
+
 
   programs.alacritty.enable = true;
 
   home.packages = with pkgs; [
     # Browsers
-    spotify
-    spicetify-cli
     brave
     firefox
-    librewolf
     inputs.zen-browser.packages."${system}".beta-unwrapped
     inputs.noctalia.packages."${system}".default
 
+    kicad
     nextcloud-client
     pdfarranger
     logisim
