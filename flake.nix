@@ -98,6 +98,7 @@
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
+                inputs.spicetify-nix.homeManagerModules.default
               ];
             };
           }
