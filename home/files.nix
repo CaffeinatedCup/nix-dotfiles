@@ -15,6 +15,8 @@
   "rofi/config.rasi".source = ./files/rofi/config.rasi;
 
   "niri/config.kdl".source = ./files/niri/config.kdl;
+
+  "noctalia.settings.json".source = ./files/noctalia/settings.json;
   };
 
 }

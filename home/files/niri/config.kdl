@@ -20,6 +20,11 @@ layer-rule {
   match namespace="^noctalia-overview*"
   place-within-backdrop true
 }
+gestures {
+    hot-corners {
+        off
+    }
+}
 
 input {
     keyboard {
