@@ -21,6 +21,7 @@
     description = "zack";
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN1WMAmvGK8OPaY2Y83dwJodhLZKv5H6E24A2TjwRSmL zack@geeker"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAEyb5SxJX7OPCQOrBgKd3sJZrmqA68+sY+nIjY0GNhO zack@parted"
     ];
   };
