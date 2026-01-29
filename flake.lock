@@ -553,14 +553,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1769241426,
-        "narHash": "sha256-lrGWyFG+089kiVshizI96Ib73PWTDgbe6F4LqO0KiRE=",
-        "path": "/home/zack/nvim-config/",
-        "type": "path"
+        "lastModified": 1769148273,
+        "narHash": "sha256-V0GstjF65ZU7uWcNGYC5lKBUMhW4HNJF0bEPy0QDRMc=",
+        "owner": "CaffeinatedCup",
+        "repo": "nvim-config",
+        "rev": "866f77d0268017e19001073d2eb087bf4a2c7ff3",
+        "type": "github"
       },
       "original": {
-        "path": "/home/zack/nvim-config/",
-        "type": "path"
+        "owner": "CaffeinatedCup",
+        "repo": "nvim-config",
+        "type": "github"
       }
     },
     "pre-commit-hooks": {
