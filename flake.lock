@@ -553,11 +553,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1769148273,
-        "narHash": "sha256-V0GstjF65ZU7uWcNGYC5lKBUMhW4HNJF0bEPy0QDRMc=",
+        "lastModified": 1769662146,
+        "narHash": "sha256-eoWJe5godI58wYyhT5UZw9eScB6LjMgsEeVIdHi9GK0=",
         "owner": "CaffeinatedCup",
         "repo": "nvim-config",
-        "rev": "866f77d0268017e19001073d2eb087bf4a2c7ff3",
+        "rev": "6852db43eb0ae936a251dd681003082b6561105e",
         "type": "github"
       },
       "original": {
