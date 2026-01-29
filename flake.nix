@@ -18,8 +18,7 @@
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim
-    #nvim-config.url = "github:CaffeinatedCup/nvim-config";
-    nvim-config.url = "/home/zack/nvim-config/";
+    nvim-config.url = "github:CaffeinatedCup/nvim-config";
 
     # Zen Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";

@@ -10,6 +10,7 @@
   ];
 
   networking.hostName = "geeker";
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # UEFI boot
   boot.loader.grub.enable = true;

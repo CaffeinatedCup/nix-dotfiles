@@ -18,6 +18,5 @@
   # gamemode %command%
   programs.gamemode.enable = true;
 
-
   # TODO add proton, maybe heroic, and bottles
 }
