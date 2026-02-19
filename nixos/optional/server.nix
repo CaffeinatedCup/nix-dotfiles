@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
   docker-compose
+  hugo
   ];
 
   virtualisation.docker.enable = true;
