@@ -11,7 +11,7 @@
         user = "zack";
       };
       "liberator" = {
-        hostname = "192.168.1.162";
+        hostname = "100.71.212.63";
         user = "zack";
       };
     };
