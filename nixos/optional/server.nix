@@ -5,6 +5,7 @@
   docker-compose
   librsvg
   imagemagick
+  hugo
   ];
 
   virtualisation.docker.enable = true;
@@ -74,8 +75,8 @@
   services.nginx = {
     enable = true;
     virtualHosts = {
-      "mywebsite" = {
-        root = "/var/www/mywebsite";
+      "mysite" = {
+        root = "/var/www/mysite";
         listen = [{ addr = "0.0.0.0"; port = 8080; }];
         locations."/" = { index = "index.html"; };
       };
