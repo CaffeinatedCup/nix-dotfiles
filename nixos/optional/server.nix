@@ -68,7 +68,7 @@
     enable = true;
     port = 8081;
     storageUrl = "https://remark.zacharydegidio.com";
-    extraEnvironemnt = {
+    extraSettings = {
     LOGLEVEL = "debug";
     };
   };
