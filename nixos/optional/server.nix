@@ -65,9 +65,12 @@
 
 
   services.rmfakecloud = {
-  enable = true;
-  port = 8081;
-  storageUrl = "https://remark.zacharydegidio.com";
+    enable = true;
+    port = 8081;
+    storageUrl = "https://remark.zacharydegidio.com";
+    extraEnvironemnt = {
+    LOGLEVEL = "debug";
+    };
   };
 
   # add minecraft
