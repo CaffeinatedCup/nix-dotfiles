@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
   docker-compose
+  librsvg
+  imagemagick
   ];
 
   virtualisation.docker.enable = true;
