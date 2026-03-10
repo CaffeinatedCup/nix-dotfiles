@@ -11,6 +11,10 @@
 
   networking.hostName = "parted";
 
+  # Sets iwd as the backend because wpa supplicant seems to disconnect on laptops
+  networking.networkmanager.wifi.backend = "iwd";
+  networking.wireless.iwd.enable = true;
+
   services.fwupd.enable = true;
 
   # UEFI boot
