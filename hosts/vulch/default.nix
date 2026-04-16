@@ -1,6 +1,6 @@
 # vultr vps for webserver
 
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
 
 {
   imports = [
@@ -26,6 +26,10 @@
   };
   
   boot.tmp.useTmpfs = false;
+
+  boot.initrd.includeDefaultModules = false;
+  hardware.enableRedistributableFirmware = lib.mkForce false;
+  hardware.enableAllHardware = false;
 
   # UEFI boot
   boot.loader.grub.enable = true;
