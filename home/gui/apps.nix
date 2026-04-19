@@ -30,6 +30,7 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
     inputs.noctalia.packages."${system}".default
 
+    claude-code
     kicad
     nextcloud-client
     pdfarranger
