@@ -28,9 +28,11 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
+    waveforms.url = "github:liff/waveforms-flake";
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs :
+  outputs = { self, nixpkgs, home-manager, waveforms, ... }@inputs :
   {
     
 
@@ -68,6 +70,8 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/parted/default.nix
+          waveforms.nixosModule
+          ({ users.users.zack.extraGroups = [ "plugdev" ]; })
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

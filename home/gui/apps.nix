@@ -30,6 +30,11 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".beta-unwrapped
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
+    udiskie
+    gnome-disk-utility
+    wineWow64Packages.wayland
+    ltspice
+    hugo
     claude-code
     kicad
     nextcloud-client
