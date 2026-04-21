@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
   docker-compose
+  librsvg
+  imagemagick
   hugo
   ];
 
@@ -63,9 +65,12 @@
 
 
   services.rmfakecloud = {
-  enable = true;
-  port = 8081;
-  storageUrl = "https://remark.zacharydegidio.com";
+    enable = true;
+    port = 8081;
+    storageUrl = "https://remark.zacharydegidio.com";
+    extraSettings = {
+    LOGLEVEL = "debug";
+    };
   };
 
   # add minecraft
