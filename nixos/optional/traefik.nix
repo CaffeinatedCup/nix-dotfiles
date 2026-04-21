@@ -27,6 +27,10 @@
     };
 
     dynamicConfigOptions.http = {
+      middlewares.ws-headers.headers.customRequestHeaders = {
+        Upgrade = "websocket";
+        Connection = "Upgrade";
+      };
       routers = {
         memos = {
           rule = "Host(`memos.zacharydegidio.com`)";
@@ -64,6 +68,7 @@
           service = "rmfakecloud";
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
+          middlewares = [ "ws-headers" ];
         };
         nginx = {
           rule = "Host(`zacharydegidio.com`)";
