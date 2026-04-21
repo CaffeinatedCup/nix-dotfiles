@@ -4,9 +4,9 @@
 
   programs.git = {
     enable = true;
-    userName = "CaffeinatedCup";
-    userEmail = "z.degidio159@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "CaffeinatedCup";
+      user.email = "z.degidio159@gmail.com";
       pull.rebase = false;
     };
   };
@@ -28,7 +28,7 @@
   python313
   python313Packages.pip
   vscode-fhs
-  inputs.nvim-config.packages.${system}.nvim # full config in my nvim-config repo
+  inputs.nvim-config.packages.${pkgs.stdenv.hostPlatform.system}.nvim # full config in my nvim-config repo
   tmux
   lazygit
   gcc
