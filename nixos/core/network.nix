@@ -4,6 +4,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  hardware.enableRedistributableFirmware = true;
+
   # Network packages
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
@@ -13,9 +15,6 @@
 
   networking.nameservers = ["8.8.8.8" "8.8.4.4" "1.1.1.1" ];
 
-  # Sets iwd as the backend because wpa supplicant seems to disconnect
-  networking.networkmanager.wifi.backend = "iwd";
-  networking.wireless.iwd.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
