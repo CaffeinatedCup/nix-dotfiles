@@ -35,6 +35,7 @@
     wineWow64Packages.wayland
     ltspice
     hugo
+    claude-code
     kicad
     nextcloud-client
     pdfarranger
