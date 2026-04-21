@@ -30,6 +30,11 @@
     inputs.zen-browser.packages."${system}".beta-unwrapped
     inputs.noctalia.packages."${system}".default
 
+    udiskie
+    gnome-disk-utility
+    wineWow64Packages.wayland
+    ltspice
+    hugo
     kicad
     nextcloud-client
     pdfarranger
