@@ -56,7 +56,7 @@
       adminpassFile = "/etc/nextcloud/admin-pass";
       dbtype = "sqlite";
     };
-    extraOptions = {
+    settings = {
       trusted_domains = [ "nextcloud.zacharydegidio.com" ];
       trusted_proxies = [ "100.71.212.63" ];
       overwriteprotocol = "https";
