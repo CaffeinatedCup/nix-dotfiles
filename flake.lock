@@ -525,7 +525,7 @@
     "nixpkgs_5": {
       "locked": {
         "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "narHash": "sha256-I45esRSssFtJ8p/gLHUZ1OUaaTaVLluNkABkk6arQwE=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "dd9b079222d43e1943b6ebd802f04fd959dc8e61",
@@ -586,11 +586,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1769662146,
-        "narHash": "sha256-eoWJe5godI58wYyhT5UZw9eScB6LjMgsEeVIdHi9GK0=",
+        "lastModified": 1776867440,
+        "narHash": "sha256-1VXEex+fUAN2RPeHQceDFw5l1cUiKQcPI0r/JWnrmfk=",
         "owner": "CaffeinatedCup",
         "repo": "nvim-config",
-        "rev": "6852db43eb0ae936a251dd681003082b6561105e",
+        "rev": "f58e0e570aded9b6978d9c4cde17787bdaf746dd",
         "type": "github"
       },
       "original": {
