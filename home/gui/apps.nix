@@ -16,7 +16,7 @@
 
   programs.spicetify = {
     enable = true;
-    theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.comfy;
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.comfy;
     colorScheme = "Everforest";
   };
 
@@ -27,8 +27,8 @@
     # Browsers
     brave
     firefox
-    inputs.zen-browser.packages."${system}".beta-unwrapped
-    inputs.noctalia.packages."${system}".default
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".beta-unwrapped
+    inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
     udiskie
     gnome-disk-utility

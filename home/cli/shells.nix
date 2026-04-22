@@ -5,6 +5,7 @@
   # Note: Default shell set in nix.nix
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
     matchBlocks = {
       "vulch" = {
         hostname = "140.82.6.170";
@@ -36,6 +37,7 @@
 
   programs.zsh = {
     enable = true;
+    dotDir = config.home.homeDirectory;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
