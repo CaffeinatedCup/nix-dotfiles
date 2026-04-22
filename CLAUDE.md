@@ -6,7 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Rebuild and switch the current host's NixOS config:
 ```bash
+<<<<<<< HEAD
 sudo nixos-rebuild switch --flake .#<hostname>
+=======
+sudo nh os swtich --hostname=.#<hostname>
+>>>>>>> 95b2f2d28fe59332dbf9ff6c1a228a52a28b4af5
 ```
 
 Rebuild with verbose output (useful for debugging):
