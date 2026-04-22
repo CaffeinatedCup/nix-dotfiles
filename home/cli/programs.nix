@@ -4,9 +4,9 @@
 
   programs.git = {
     enable = true;
-    userName = "CaffeinatedCup";
-    userEmail = "z.degidio159@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "CaffeinatedCup";
+      user.email = "z.degidio159@gmail.com";
       pull.rebase = false;
     };
   };
