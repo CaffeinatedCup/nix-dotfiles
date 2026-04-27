@@ -10,5 +10,6 @@
       ./optional/gaming.nix
       ./optional/fonts.nix
       ./optional/desktop.nix
+      ./optional/syncthing.nix
     ];
 }
