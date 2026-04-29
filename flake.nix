@@ -5,6 +5,9 @@
     # Nix packages (unstable)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Nix packages (stable)
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+
     # Home manger
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -32,7 +35,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, waveforms, ... }@inputs :
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, waveforms, ... }@inputs :
   {
     
 
@@ -76,7 +79,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              pkgs-stable = import nixpkgs-stable { system = "x86_64-linux"; config.allowUnfree = true; };
+            };
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
@@ -97,7 +103,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              pkgs-stable = import nixpkgs-stable { system = "x86_64-linux"; config.allowUnfree = true; };
+            };
             home-manager.users.zack = {
               imports = [
                 ./home/home.nix
