@@ -21,7 +21,7 @@
     nvim-config.url = "github:CaffeinatedCup/nvim-config";
 
     # Zen Browser
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.url = "github:youwen5/zen-browser-flake";
 
     # Hardware modules
     nixos-hardware.url = "github:NixOS/nixos-hardware";

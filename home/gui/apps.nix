@@ -27,7 +27,7 @@
     # Browsers
     brave
     firefox
-    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".beta-unwrapped
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
     udiskie
