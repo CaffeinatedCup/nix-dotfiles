@@ -4,6 +4,7 @@
 
   programs.git = {
     enable = true;
+    signing.format = null;
     settings = {
       user.name = "CaffeinatedCup";
       user.email = "z.degidio159@gmail.com";
@@ -27,7 +28,7 @@
   # Editors & Dev Tools
   python313
   python313Packages.pip
-  inputs.nvim-config.packages.${system}.nvim # full config in my nvim-config repo
+  inputs.nvim-config.packages.${pkgs.stdenv.hostPlatform.system}.nvim # full config in my nvim-config repo
   tmux
   lazygit
   gcc
