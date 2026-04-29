@@ -13,7 +13,7 @@
   # Packages for hyprland
   home.packages = with pkgs; [
     waybar #status bar
-    swww #changing wallpapers
+    awww #changing wallpapers
     hyprpaper #wallpaper
     hypridle #idle daemon
     wlogout #logout daemon

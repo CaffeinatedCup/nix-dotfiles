@@ -9,7 +9,7 @@
     overrideFolders = true;
     settings = {
       devices = {
-        geeker = { id = "REPLACE-WITH-GEEKER-DEVICE-ID"; };
+        geeker = { id = "ECXPXWK-E2EGM6P-NUPRBMY-24ZD2P4-237IERM-YL6CJTN-PL4FVO6-HWLY3QN"; };
         parted = { id = "5JC7OCE-7N7FCVR-BJPGKTW-OFBBRYM-N5BGQQH-UOWE2CU-QRECSHT-25MRDQB"; };
       };
       folders = {
