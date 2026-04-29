@@ -1,5 +1,5 @@
 
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, pkgs-stable, ... }:
 {
 
   programs.kitty = {
@@ -32,8 +32,8 @@
 
     udiskie
     gnome-disk-utility
-    wineWow64Packages.wayland
-    ltspice
+    pkgs-stable.wineWow64Packages.wayland
+    pkgs-stable.ltspice
     hugo
     claude-code
     kicad
