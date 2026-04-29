@@ -1,8 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.hyprland.enable = true;
   programs.niri.enable = true;
+
+  environment.sessionVariables = {
+  XDG_CURRENT_DESKTOP = "niri";
+  XDG_SESSION_TYPE = "wayland";
+  };
 
     xdg.portal = {
       enable = true;
@@ -12,9 +17,9 @@
         xdg-desktop-portal-wlr
         xdg-desktop-portal-gtk
       ];
-
-      config.common = {
-        default = [ "gtk"];
+      config = {
+        niri.default = lib.mkForce ["gtk"];
+        common.default = ["gtk"];
       };
     };
 
