@@ -353,10 +353,7 @@ window-rule {
 // Prevent idle lock/sleep while video players are open.
 // Browser-based video (YouTube etc.) is handled by swayidle's -w flag
 // which respects apps that set a wayland idle inhibitor during playback.
-window-rule {
-    match app-id=r#"^(mpv|vlc|celluloid|io\.github\.celluloid_player\.Celluloid)$"#
-    idle-inhibit "always"
-}
+// mpv/vlc/celluloid set their own Wayland idle inhibitor during playback.
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
