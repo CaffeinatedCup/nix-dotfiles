@@ -5,6 +5,13 @@
 
   #TODO xppen drivers, logitech mouse, and maybe gui's for changing stuff like audio output
 
+  # USB permission stuff for plugging in microcontrollers
+  services.udev.packages = [ pkgs.stlink pkgs.openocd ];
+  services.udev.extraRules = ''
+  # STM32 DFU bootloader (Black Pill / ROM bootloader)
+  SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0666"
+  '';
+
   services.upower.enable = true;
 
   services.tuned.enable = true;

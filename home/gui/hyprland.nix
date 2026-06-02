@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 {
   #wayland.windowManager.hyprland = {
   #enable = true;
@@ -32,19 +31,26 @@
     swaylock-effects
     xwayland-satellite
     swaybg
+
+    # Just a shell script for my swaylock command
+    (pkgs.writeShellScriptBin "zlock" ''
+      exec ${pkgs.swaylock-effects}/bin/swaylock -fF \
+        --effect-blur 7x5 --clock --indicator \
+        --image /home/zack/Pictures/wallpapers/dark-pixel-mountain.jpg
+    '')
   ];
 
   services.swayidle = {
     enable = true;
     extraArgs = [ "-w" ]; # respect wayland idle inhibitors (e.g. browser video playback)
     events = [
-      { event = "before-sleep"; command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator"; }
-      { event = "lock";         command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator"; }
+      { event = "before-sleep"; command = "zlock"; }
+      { event = "lock";         command = "zlock"; }
     ];
     timeouts = [
       {
         timeout = 600; # 10 minutes → lock
-        command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator";
+        command = "zlock";
       }
       {
         timeout = 900; # 15 minutes → suspend
