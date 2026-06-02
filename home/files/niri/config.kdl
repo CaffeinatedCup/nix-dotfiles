@@ -350,6 +350,11 @@ window-rule {
     open-floating true
 }
 
+// Prevent idle lock/sleep while video players are open.
+// Browser-based video (YouTube etc.) is handled by swayidle's -w flag
+// which respects apps that set a wayland idle inhibitor during playback.
+// mpv/vlc/celluloid set their own Wayland idle inhibitor during playback.
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
