@@ -12,6 +12,13 @@
     };
   };
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableZshIntegration = true;
+    silent = true;
+  };
+
 
   # RSS reader, might configure later
   programs.newsboat = {

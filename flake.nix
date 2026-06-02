@@ -74,7 +74,7 @@
         modules = [
           ./hosts/parted/default.nix
           waveforms.nixosModule
-          ({ users.users.zack.extraGroups = [ "plugdev" ]; })
+          { users.users.zack.extraGroups = [ "plugdev" ]; }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
