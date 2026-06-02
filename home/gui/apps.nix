@@ -30,6 +30,7 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
+    octaveFull
     udiskie
     gnome-disk-utility
     pkgs-stable.wineWow64Packages.wayland

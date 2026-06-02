@@ -29,9 +29,29 @@
     slurp
     gtklock
     swayidle
+    swaylock-effects
     xwayland-satellite
     swaybg
   ];
+
+  services.swayidle = {
+    enable = true;
+    extraArgs = [ "-w" ]; # respect wayland idle inhibitors (e.g. browser video playback)
+    events = [
+      { event = "before-sleep"; command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator"; }
+      { event = "lock";         command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator"; }
+    ];
+    timeouts = [
+      {
+        timeout = 600; # 10 minutes → lock
+        command = "${pkgs.swaylock-effects}/bin/swaylock -fF --effect-blur 7x5 --clock --indicator";
+      }
+      {
+        timeout = 900; # 15 minutes → suspend
+        command = "systemctl suspend";
+      }
+    ];
+  };
 
   services.cliphist = {
     enable = true;
