@@ -17,6 +17,11 @@
 
   services.fwupd.enable = true;
 
+  # CubeIDE setup
+  environment.systemPackages = [
+    inputs.stm32cubeide.packages.${pkgs.system}.default
+  ];
+
   # UEFI boot
   boot.loader.grub.enable = true;
   boot.loader.grub.devices = [ "nodev" ];
