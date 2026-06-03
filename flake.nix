@@ -33,6 +33,8 @@
 
     waveforms.url = "github:liff/waveforms-flake";
 
+    stm32cubeide.url = "git+https://git.sr.ht/~shelvacu/stm32cubeide-nix";
+
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, waveforms, ... }@inputs :
