@@ -30,6 +30,8 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
+    sioyek
+    pulseview
     octaveFull
     udiskie
     gnome-disk-utility
