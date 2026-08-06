@@ -46,6 +46,7 @@
       ll="eza -l";
       lt="eza --tree";
       la="eza -la";
+      silabs="nix run /home/zack/Code/embedded/arsenal-nexus/Silabs";
     };
     initContent = ''
     if [[ $- == *i* ]] && [[ -z "$IN_NIX_SHELL" ]] && [[ -z "$FASTFETCH_RAN" ]]; then

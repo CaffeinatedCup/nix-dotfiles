@@ -30,6 +30,9 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
+    picocom
+    cmake # remove eventually, should be confined to a dev shell
+    #rcu
     sioyek
     pulseview
     octaveFull

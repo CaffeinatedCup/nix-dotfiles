@@ -660,19 +660,36 @@
     "nvim-config": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "plugins-claudecode": "plugins-claudecode"
       },
       "locked": {
-        "lastModified": 1781286830,
-        "narHash": "sha256-20QKqZoeSjW+b0r+/Vn7oszfI7t/dp9LZ0FoIjuE0VA=",
+        "lastModified": 1786055183,
+        "narHash": "sha256-Y75fXFwYPEqpLaCdUiMWAix1J1hamZTX13plNdHFKbs=",
         "owner": "CaffeinatedCup",
         "repo": "nvim-config",
-        "rev": "7c14311ec92e155d2be25b8699a6d3bc87b6de0b",
+        "rev": "32cd0e64135acaff378c6852145bd9e129576cc1",
         "type": "github"
       },
       "original": {
         "owner": "CaffeinatedCup",
         "repo": "nvim-config",
+        "type": "github"
+      }
+    },
+    "plugins-claudecode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782408568,
+        "narHash": "sha256-oMBPSRQFDmJ9Lq+ZP8vFMHaocm4sPX3D/orVMNwVXuM=",
+        "owner": "coder",
+        "repo": "claudecode.nvim",
+        "rev": "2390c6e45c4789072c293ac69de051d169668b29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "coder",
+        "repo": "claudecode.nvim",
         "type": "github"
       }
     },
