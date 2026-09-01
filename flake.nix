@@ -17,7 +17,11 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
     # Noctalia
+<<<<<<< HEAD
     noctalia.url = "github:noctalia-dev/noctalia-shell";
+=======
+    noctalia.url = "github:noctalia-dev/noctalia-shell/9f8dd48c8df5ab1f7f87ddf9842627e1e5682186";
+>>>>>>> 7bcad514c08d245e20e4364a4e32406150e56902
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim

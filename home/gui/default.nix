@@ -6,5 +6,6 @@
   ./hyprland.nix
   ./gtk.nix
   ./xdg.nix
+  ./zen.nix
   ];
 }

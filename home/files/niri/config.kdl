@@ -14,6 +14,10 @@ debug {
 }
 
 include "noctalia.kdl"
+<<<<<<< HEAD
+=======
+include "/home/zack/.config/niri/monitor.kdl"
+>>>>>>> 7bcad514c08d245e20e4364a4e32406150e56902
 spawn-at-startup "sh" "-c" "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE DISPLAY"
 
 // Set the overview wallpaper on the backdrop.

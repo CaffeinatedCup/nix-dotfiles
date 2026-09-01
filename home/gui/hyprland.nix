@@ -23,7 +23,7 @@
     rofi
     wl-clipboard
     librsvg
-    #nwg-displays broken rn :(
+    nwg-displays
     grim
     slurp
     gtklock
