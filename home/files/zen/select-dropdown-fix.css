@@ -1,0 +1,73 @@
+/* ============================================================================
+ * Zen native <select> dropdown fix  (userChrome / chrome context)
+ * ----------------------------------------------------------------------------
+ * Managed declaratively by home-manager (home/gui/zen.nix). Do not hand-edit.
+ *
+ * WHY: Noctalia's `zenBrowser` template themes the browser chrome but never
+ * targets the native <select> popup (#ContentSelectDropdown). Without explicit
+ * option colors the popup background and the option text resolve to nearly the
+ * same value, so the list is unreadable except for the highlighted row.
+ *
+ * DYNAMIC COLORS: this sheet intentionally does NOT hardcode hex values. It
+ * consumes the CSS custom properties that Noctalia's generated
+ * ~/.cache/noctalia/zen-browser/zen-userChrome.css defines on `*`
+ * (--base/--surface/--overlay/--muted/--subtle/--text/--secondary/--primary/
+ *  --on_primary). Those variables are regenerated on every wallpaper change and
+ * dark/light toggle, so these rules follow the palette automatically.
+ * The fallbacks after each `var(...)` are the current scheme, used only if the
+ * Noctalia sheet ever fails to load.
+ * ========================================================================== */
+
+/* Popup container */
+#ContentSelectDropdown menupopup {
+  appearance: none !important;
+  background-color: var(--overlay, #313244) !important;
+  color: var(--text, #cdd6f4) !important;
+  /* Newer Firefox/Zen panel plumbing also reads these: */
+  --panel-background: var(--overlay, #313244) !important;
+  --panel-color: var(--text, #cdd6f4) !important;
+  --arrowpanel-background: var(--overlay, #313244) !important;
+  --arrowpanel-color: var(--text, #cdd6f4) !important;
+  border: 1px solid var(--primary, #cba6f7) !important;
+}
+
+/* Every option row + its label, and optgroup labels (rendered as menucaption).
+   Transparent background so the popup background shows through; explicit text. */
+#ContentSelectDropdown menuitem,
+#ContentSelectDropdown menucaption,
+#ContentSelectDropdown menuitem > label,
+#ContentSelectDropdown menucaption > label,
+#ContentSelectDropdown .menu-text,
+#ContentSelectDropdown .menu-iconic-text {
+  background-color: transparent !important;
+  color: var(--text, #cdd6f4) !important;
+}
+
+/* optgroup labels: make them visually distinct (accent + bold) */
+#ContentSelectDropdown menucaption,
+#ContentSelectDropdown menucaption > label {
+  color: var(--primary, #cba6f7) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* The option currently checked/selected in the <select> */
+#ContentSelectDropdown menuitem[selected="true"] {
+  background-color: var(--subtle, #42435c) !important;
+  color: var(--text, #cdd6f4) !important;
+}
+
+/* Hover / keyboard-highlighted row — deliberately high-contrast accent so it is
+   obviously distinct from both the popup background and the resting rows. */
+#ContentSelectDropdown menuitem[_moz-menuactive="true"],
+#ContentSelectDropdown menuitem[_moz-menuactive="true"] > label {
+  background-color: var(--primary, #cba6f7) !important;
+  color: var(--on_primary, #11111b) !important;
+}
+
+/* Disabled options: dim but still legible */
+#ContentSelectDropdown menuitem[disabled="true"],
+#ContentSelectDropdown menuitem[disabled="true"] > label {
+  color: var(--muted, #3a3b50) !important;
+  opacity: 0.7 !important;
+}

@@ -13,6 +13,7 @@
   # mangohud %command%
   environment.systemPackages = with pkgs; [
     mangohud
+    crawl
   ];
 
   # gamemode %command%

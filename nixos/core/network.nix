@@ -30,6 +30,6 @@
     enable = true;
     };
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 41641 ];
+  networking.firewall.allowedTCPPorts = [ 41641 9090 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 }
