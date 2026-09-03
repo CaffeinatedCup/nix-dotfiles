@@ -41,6 +41,7 @@
   gcc
   gnupg
   gnumake
+  iw
 
 
   # CLI Enhancement

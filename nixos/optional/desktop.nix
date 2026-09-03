@@ -23,6 +23,9 @@
       };
     };
 
+  #Allows for cross compiling
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
     services.gvfs.enable = true;
     services.udisks2.enable = true;
 
