@@ -10,8 +10,6 @@
   services.udev.extraRules = ''
   # STM32 DFU bootloader (Black Pill / ROM bootloader)
   SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0666"
-<<<<<<< HEAD
-=======
 
   # For logic analyzer
   SUBSYSTEM=="usb", ATTR{idVendor}=="0925", ATTR{idProduct}=="3881", MODE="0660", GROUP="plugdev"
@@ -28,7 +26,6 @@
   SUBSYSTEMS=="usb", ATTRS{idVendor}=="2b3e", ATTRS{idProduct}=="*", MODE="0666", TAG+="uaccess"
   SUBSYSTEM=="tty", ATTRS{idVendor}=="2b3e", ATTRS{idProduct}=="*", TAG+="uaccess", SYMLINK+="cw_serial%n"
   SUBSYSTEM=="tty", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="6124", TAG+="uaccess", SYMLINK+="cw_bootloader%n"
->>>>>>> 7bcad514c08d245e20e4364a4e32406150e56902
   '';
 
   services.upower.enable = true;
