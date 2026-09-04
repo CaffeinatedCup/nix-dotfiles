@@ -7,7 +7,37 @@
     ./hardware-configuration.nix
     ../../nixos/core
     ../../nixos/optional/traefik.nix
+    "${pkgs.disko}/share/disko.nix"
   ];
+
+  disko.devices = {
+    disk.main = {
+      type = "disk";
+      device = "/dev/vda";
+      content = {
+        type = "gpt";
+        partitions = {
+          ESP = {
+            size = "512M";
+            type = "EF00";
+            content = {
+              type = "filesystem";
+              format = "vfat";
+              mountpoint = "/boot";
+            };
+          };
+          root = {
+            size = "100%";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/";
+            };
+          };
+        };
+      };
+    };
+  };
 
   networking.hostName = "vulch";
 
@@ -25,17 +55,23 @@
     TERM = "xterm-256color";
   };
   
-  boot.tmp.useTmpfs = false;
+  boot = {
+    tmp.useTmpfs = false;
+    initrd.includeDefaultModules = false;
+    #UEFI boot
+    loader = {
+      grub = {
+        enable = true;
+        devices = [ "nodev" ];
+        useOSProber = true;
+        efiSupport = true;
+      };
+    efi.canTouchEfiVariables = true;
+    };
+  };
 
-  boot.initrd.includeDefaultModules = false;
   hardware.enableRedistributableFirmware = lib.mkForce false;
   hardware.enableAllHardware = false;
 
-  # UEFI boot
-  boot.loader.grub.enable = true;
-  boot.loader.grub.devices = [ "nodev" ];
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 }
 
