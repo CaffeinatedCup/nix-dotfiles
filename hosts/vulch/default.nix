@@ -7,7 +7,6 @@
     ./hardware-configuration.nix
     ../../nixos/core
     ../../nixos/optional/traefik.nix
-    "${pkgs.disko}/share/disko.nix"
   ];
 
   disko.devices = {
