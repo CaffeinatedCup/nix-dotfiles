@@ -25,23 +25,17 @@
     TERM = "xterm-256color";
   };
   
-  boot = {
-    tmp.useTmpfs = false;
-    initrd.includeDefaultModules = false;
-    #UEFI boot
-    loader = {
-      grub = {
-        enable = true;
-        devices = [ "nodev" ];
-        useOSProber = true;
-        efiSupport = true;
-      };
-    efi.canTouchEfiVariables = true;
-    };
-  };
+  boot.tmp.useTmpfs = false;
 
+  boot.initrd.includeDefaultModules = false;
   hardware.enableRedistributableFirmware = lib.mkForce false;
   hardware.enableAllHardware = false;
 
+  # UEFI boot
+  boot.loader.grub.enable = true;
+  boot.loader.grub.devices = [ "nodev" ];
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 }
 
