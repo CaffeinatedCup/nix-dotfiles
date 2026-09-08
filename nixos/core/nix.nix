@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Nixy stuff like cachix, flake setting, system packages, and users bc I only have one
@@ -11,8 +11,6 @@
 
   programs.zsh.enable = true;
   
-  # Reorganize this, allows for cross compiling
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
   # Users
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
@@ -26,20 +24,29 @@
     ];
   };
 
-  nix.settings = {
-    builders-use-substitutes = true;
-    trusted-users = [ "root" "zack" ];
-    require-sigs = false;
-    extra-substituters = [
-      "https://cache.nixos.org/"
-      #"https://hyprland.cachix.org"
-      "https://nix-community.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      #"hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7sU6z3gU6BPdq6bexdQrVw="
+  nix = {
+    settings = {
+      builders-use-substitutes = true;
+      trusted-users = [ "root" "zack" ];
+      require-sigs = false;
+      extra-substituters = [
+        "https://cache.nixos.org/"
+        #"https://hyprland.cachix.org"
+        "https://nix-community.cachix.org"
+      ];
+      extra-trusted-public-keys = [
+        #"hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7sU6z3gU6BPdq6bexdQrVw="
+      ];
+    };
+  # garbage collection and optimization
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
 
-    ];
+    optimise.automatic = true;
   };
 
 
