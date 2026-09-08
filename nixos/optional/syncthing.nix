@@ -34,7 +34,6 @@
   "fs.inotify.max_user_watches" = 524288;
   "fs.inotify.max_user_instances" = 1024;
   };
-
   networking.firewall.allowedTCPPorts = [ 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 }

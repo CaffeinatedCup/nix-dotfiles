@@ -42,6 +42,7 @@
   gnupg
   gnumake
   platformio-core
+  iw
 
 
   # CLI Enhancement
