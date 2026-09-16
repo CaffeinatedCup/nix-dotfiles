@@ -35,9 +35,12 @@
 
     stm32cubeide.url = "git+https://git.sr.ht/~shelvacu/stm32cubeide-nix";
 
+    disko.url = "github:nix-community/disko/latest";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, waveforms, ... }@inputs :
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, waveforms, disko, ... }@inputs :
   {
     
 
@@ -66,6 +69,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/vulch/default.nix
+          inputs.disko.nixosModules.disko
         ];
         specialArgs = {inherit inputs; };
       };
