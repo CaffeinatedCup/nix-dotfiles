@@ -35,6 +35,9 @@
   # Enable USB device connection
   services.udisks2.enable = true;
 
+  # Enable running unpatched binaries
+  programs.nix-ld.enable = true;
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
