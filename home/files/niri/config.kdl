@@ -28,6 +28,11 @@ gestures {
     }
 }
 
+// fixes some niri-java rendering issues
+environment {
+    _JAVA_AWT_WM_NONREPARENTING "1"
+}
+
 input {
     keyboard {
         repeat-delay 200
