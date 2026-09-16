@@ -31,8 +31,10 @@
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
 
     picocom
+    logisim-evolution
     cmake # remove eventually, should be confined to a dev shell
     #rcu
+    quartus-prime-lite
     sioyek
     pulseview
     octaveFull
