@@ -38,6 +38,12 @@
     disko.url = "github:nix-community/disko/latest";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
+
+    deploy-rs.url = "github:serokell/deploy-rs";
+    deploy-rs.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, waveforms, disko, ... }@inputs :
@@ -61,6 +67,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/liberator/default.nix
+          inputs.agenix.nixosModules.default
         ];
         specialArgs = {inherit inputs; };
       };
@@ -70,6 +77,7 @@
         modules = [
           ./hosts/vulch/default.nix
           inputs.disko.nixosModules.disko
+          inputs.agenix.nixosModules.default
         ];
         specialArgs = {inherit inputs; };
       };
@@ -124,5 +132,28 @@
         specialArgs = {inherit inputs; };
       };
     };
+
+    deploy.nodes = {
+      liberator = {
+        hostname = "100.71.212.63";
+        profiles.system = {
+          user = "root";
+          path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+            self.nixosConfigurations.liberator;
+        };
+      };
+      vulch = {
+        hostname = "140.82.6.170";
+        profiles.system = {
+          user = "root";
+          path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
+            self.nixosConfigurations.vulch;
+        };
+      };
+    };
+
+    checks = builtins.mapAttrs
+      (_system: deployLib: deployLib.deployChecks self.deploy)
+      inputs.deploy-rs.lib;
   };
 }
