@@ -53,13 +53,13 @@
     ## My nix configs ##
     nixosConfigurations = {
 
-       pie = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./hosts/pie/default.nix
-          inputs.nixos-hardware.nixosModules.raspberry-pi-4
-        ];
-      };
+      #  pie = nixpkgs.lib.nixosSystem {
+      #   system = "aarch64-linux";
+      #   modules = [
+      #     ./hosts/pie/default.nix
+      #     inputs.nixos-hardware.nixosModules.raspberry-pi-4
+      #   ];
+      # };
 
 
         ## liberator, the darter pro 10 ##
@@ -136,6 +136,7 @@
     deploy.nodes = {
       liberator = {
         hostname = "100.71.212.63";
+        interactiveSudo = true;
         profiles.system = {
           user = "root";
           path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
@@ -144,6 +145,7 @@
       };
       vulch = {
         hostname = "140.82.6.170";
+        interactiveSudo = true;
         profiles.system = {
           user = "root";
           path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
