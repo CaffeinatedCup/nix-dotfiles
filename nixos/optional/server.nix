@@ -32,7 +32,7 @@
       MEMOS_PORT = "5230";
       MEMOS_DATA = "/var/lib/memos";
       MEMOS_DRIVER = "sqlite";
-      MEMOS_INSTANCE_URL = "http://192.168.1.162:5230";
+      MEMOS_INSTANCE_URL = "https://memos.zacharydegidio.com";
     };
   };
 
@@ -70,7 +70,7 @@
     };
     settings = {
       trusted_domains = [ "nextcloud.zacharydegidio.com" ];
-      trusted_proxies = [ "100.71.212.63" ];
+      trusted_proxies = [ "100.96.246.80" ];
       overwriteprotocol = "https";
     };
   };
@@ -90,10 +90,12 @@
 
   services.open-webui = {
     enable = true;
+    host = "0.0.0.0";
     port = 8085;
     environment = {
       OLLAMA_BASE_URL = "http://127.0.0.1:11434";
       WEBUI_AUTH = "true";
+      WEBUI_URL = "https://ai.zacharydegidio.com";
     };
   };
 
@@ -122,6 +124,7 @@
   services.homepage-dashboard = {
     enable = true;
     listenPort = 8082;
+    allowedHosts = "home.zacharydegidio.com";
     services = [
       {
         "Media & AI" = [
