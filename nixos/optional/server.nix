@@ -6,12 +6,15 @@
     librsvg
     imagemagick
     hugo
-    agenix
+    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   virtualisation.docker.enable = true;
 
-  age.secrets.vaultwarden-admin-token.file = ../../secrets/vaultwarden-admin-token.age;
+  age.secrets.vaultwarden-admin-token = {
+    file = ../../secrets/vaultwarden-admin-token.age;
+    owner = "vaultwarden";
+  };
   age.secrets.nextcloud-admin-pass = {
     file = ../../secrets/nextcloud-admin-pass.age;
     owner = "nextcloud";
@@ -96,7 +99,7 @@
 
   services.freshrss = {
     enable = true;
-    hostName = "rss.zacharydegidio.com";
+    virtualHost = "rss.zacharydegidio.com";
     baseUrl = "https://rss.zacharydegidio.com";
     defaultUser = "zack";
     passwordFile = config.age.secrets.freshrss-password.path;
