@@ -76,6 +76,24 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
+        ai = {
+          rule = "Host(`ai.zacharydegidio.com`)";
+          service = "open-webui";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
+        rss = {
+          rule = "Host(`rss.zacharydegidio.com`)";
+          service = "freshrss";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
+        home = {
+          rule = "Host(`home.zacharydegidio.com`)";
+          service = "homepage";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
       };
       services.memos.loadBalancer.servers = [
         { url = "http://100.71.212.63:5230"; }
@@ -97,6 +115,15 @@
       ];
       services.nginx.loadBalancer.servers = [
         { url = "http://100.71.212.63:8080"; }
+      ];
+      services.open-webui.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8085"; }
+      ];
+      services.freshrss.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8086"; }
+      ];
+      services.homepage.loadBalancer.servers = [
+        { url = "http://100.71.212.63:8082"; }
       ];
     };
 

@@ -44,6 +44,7 @@
   gnumake
   platformio-core
   iw
+  crush
 
 
   # CLI Enhancement
