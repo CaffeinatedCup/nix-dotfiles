@@ -19,7 +19,11 @@
 
   # CubeIDE setup
   environment.systemPackages = [
-    inputs.stm32cubeide.packages.${pkgs.system}.default
+    inputs.stm32cubeide.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  home-manager.users.zack.home.packages = with pkgs; [
+    quartus-prime-lite
   ];
 
   # UEFI boot

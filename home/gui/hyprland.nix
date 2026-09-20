@@ -43,10 +43,10 @@
   services.swayidle = {
     enable = true;
     extraArgs = [ "-w" ]; # respect wayland idle inhibitors (e.g. browser video playback)
-    events = [
-      { event = "before-sleep"; command = "zlock"; }
-      { event = "lock";         command = "zlock"; }
-    ];
+    events = {
+      before-sleep = "zlock";
+      lock = "zlock";
+    };
     timeouts = [
       {
         timeout = 600; # 10 minutes → lock

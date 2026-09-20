@@ -6,14 +6,14 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks = {
+    settings = {
       "vulch" = {
-        hostname = "140.82.6.170";
-        user = "zack";
+        HostName = "140.82.6.170";
+        User = "zack";
       };
       "liberator" = {
-        hostname = "100.71.212.63";
-        user = "zack";
+        HostName = "100.71.212.63";
+        User = "zack";
       };
     };
   };
