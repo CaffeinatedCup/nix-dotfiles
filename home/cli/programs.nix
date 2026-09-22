@@ -19,16 +19,33 @@
     silent = true;
   };
 
-
-  # RSS reader, might configure later
-  programs.newsboat = {
-    enable = true;
-    urls = [
-      {
-        url = "https://techcrunch.com/feed";
-      }
-    ];
+  programs.crush = {
+  enable = true;
+  settings = {
+    providers.openrouter = {
+      type = "openai-compat";
+      base_url = "https://openrouter.ai/api/v1";
+      api_key = "$(cat /run/agenix/openrouter-api-key)";
+      models = [
+        {
+          id = "~deepseek/deepseek-pro-latest";
+          name = "DeepSeek V3 (latest)";
+        }
+      ];
+    };
+    models.deepseek = {
+      provider = "openrouter";
+      model = "~deepseek/deepseek-pro-latest";
+    };
   };
+};
+
+  age.secrets.openrouter-api-key = {
+    file = ../../secrets/openrouter-api-key.age;
+    owner = "zack";
+  };
+
+
 
   home.packages = with pkgs; [
 
@@ -44,7 +61,6 @@
   gnumake
   platformio-core
   iw
-  crush
 
 
   # CLI Enhancement

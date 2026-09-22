@@ -9,4 +9,5 @@ in {
   "vaultwarden-admin-token.age".publicKeys = users ++ [ liberator ];
   "nextcloud-admin-pass.age".publicKeys    = users ++ [ liberator ];
   "freshrss-password.age".publicKeys       = users ++ [ liberator ];
+  "openrouter-api-key.age".publicKeys = users;
 }
