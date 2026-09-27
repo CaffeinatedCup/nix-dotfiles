@@ -87,6 +87,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/parted/default.nix
+          inputs.agenix.nixosModules.default
           waveforms.nixosModule
           { users.users.zack.extraGroups = [ "plugdev" ]; }
           home-manager.nixosModules.home-manager
@@ -113,6 +114,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/geeker/default.nix
+          inputs.agenix.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

@@ -22,30 +22,9 @@
   programs.crush = {
   enable = true;
   settings = {
-    providers.openrouter = {
-      type = "openai-compat";
-      base_url = "https://openrouter.ai/api/v1";
-      api_key = "$(cat /run/agenix/openrouter-api-key)";
-      models = [
-        {
-          id = "~deepseek/deepseek-pro-latest";
-          name = "DeepSeek V3 (latest)";
-        }
-      ];
-    };
-    models.deepseek = {
-      provider = "openrouter";
-      model = "~deepseek/deepseek-pro-latest";
-    };
+    providers.openrouter.api_key = "$(cat /run/agenix/openrouter-api-key)";
   };
 };
-
-  age.secrets.openrouter-api-key = {
-    file = ../../secrets/openrouter-api-key.age;
-    owner = "zack";
-  };
-
-
 
   home.packages = with pkgs; [
 
