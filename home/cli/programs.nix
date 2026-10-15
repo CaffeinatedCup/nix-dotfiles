@@ -30,6 +30,13 @@
     ];
   };
 
+  programs.crush = {
+  enable = true;
+  settings = {
+    providers.openrouter.api_key = "$(cat /run/agenix/openrouter-api-key)";
+  };
+};
+
   home.packages = with pkgs; [
 
   # Editors & Dev Tools
@@ -44,7 +51,6 @@
   gnumake
   platformio-core
   iw
-  crush
 
 
   # CLI Enhancement

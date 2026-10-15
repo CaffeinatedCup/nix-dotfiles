@@ -27,6 +27,11 @@
       };
     };
 
+  age.secrets.openrouter-api-key = {
+    file = ../../secrets/openrouter-api-key.age;
+    owner = "zack";
+  };
+
   #Allows for cross compiling
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
