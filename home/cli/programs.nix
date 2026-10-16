@@ -30,6 +30,8 @@
 
   # Editors & Dev Tools
   ffmpeg
+  pandoc
+  tectonic
   python313
   python313Packages.pip
   inputs.nvim-config.packages.${pkgs.stdenv.hostPlatform.system}.nvim # full config in my nvim-config repo
