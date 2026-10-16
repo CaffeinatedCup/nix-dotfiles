@@ -19,6 +19,17 @@
     silent = true;
   };
 
+
+  # RSS reader, might configure later
+  programs.newsboat = {
+    enable = true;
+    urls = [
+      {
+        url = "https://techcrunch.com/feed";
+      }
+    ];
+  };
+
   programs.crush = {
   enable = true;
   settings = {
