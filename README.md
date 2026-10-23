@@ -1,9 +1,7 @@
 # Zack's NixOS Config
 
-Personal, [Nix flake](https://nixos.wiki/wiki/Flakes)-based NixOS configuration. One repo
-manages every machine I run — desktop, laptop, and a handful of servers.
-[Home Manager](https://github.com/nix-community/home-manager) is embedded as a NixOS module on
-the desktop hosts so the whole setup (system + dotfiles) builds from a single `nixos-rebuild`.
+Personal, [Nix flake](https://nixos.wiki/wiki/Flakes)-based NixOS configuration. running my desktop, laptop, homelab and vps.
+Desktop and laptop have home-manager integrated for full nix purity!
 
 ## Hosts
 
@@ -13,15 +11,13 @@ the desktop hosts so the whole setup (system + dotfiles) builds from a single `n
 | `parted`    | Framework laptop      | `x86_64-linux`  | Personal laptop               |
 | `liberator` | System76 Darter Pro   | `x86_64-linux`  | Headless home server          |
 | `vulch`     | Vultr VPS             | `x86_64-linux`  | Web / cloud server            |
-| `pie`       | Raspberry Pi 4        | `aarch64-linux` | aarch64 server                |
 
-## The Look
+## Look and Feel
 
 A Wayland desktop built around:
 
 - **Compositors:** [Niri](https://github.com/YaLTeR/niri)
 - **Shell / bar:** [Noctalia](https://github.com/noctalia-dev/noctalia-shell)
-- **Launcher / notifications:** Rofi + Mako
 - **Terminal:** Kitty
 - **Theme:** Configuarble via Noctalia
 
@@ -44,7 +40,7 @@ A Wayland desktop built around:
     └── files/             # Raw dotconfigs linked into ~/.config
 ```
 
-## Notable Flake Inputs
+## Flake Inputs
 
 - [`nixpkgs`](https://github.com/nixos/nixpkgs) — `nixos-unstable` channel
 - `nixpkgs-stable` — `nixos-25.11` (for select packages)
@@ -60,5 +56,4 @@ A Wayland desktop built around:
 
 ## TODO
 * Make Noctalia config stuff permanenent
-* Secrets management (agenix or SOPS-nix)
 * Add lanzaboot
