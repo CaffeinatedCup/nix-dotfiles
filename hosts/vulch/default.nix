@@ -9,6 +9,11 @@
     ../../nixos/optional/traefik.nix
   ];
 
+
+  # adding zram to combat OOM when rebuilding after a flake update
+  zramSwap.enable = true;
+  zramSwap.memoryPercent = 100;
+
   networking.hostName = "vulch";
 
   users.users.root.openssh.authorizedKeys.keys = [
