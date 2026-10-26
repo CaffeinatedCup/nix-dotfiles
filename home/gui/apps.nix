@@ -23,7 +23,7 @@
   };
 
   home.packages = with pkgs; [
-    # Browsers
+    # web browsers
     brave
     (inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
       makeWrapperArgs = (old.makeWrapperArgs or [ ]) ++ [
@@ -31,26 +31,18 @@
       ];
     }))
 
+
     inputs.noctalia.packages."${pkgs.stdenv.hostPlatform.system}".default
-
-
-    picocom
     logisim-evolution
-    cmake # remove eventually, should be confined to a dev shell
     #rcu
     sioyek
     pulseview
-    octaveFull
-    udiskie
     gnome-disk-utility
     pkgs-stable.wineWow64Packages.wayland
     pkgs-stable.ltspice
-    hugo
-    claude-code
     kicad
     nextcloud-client
     pdfarranger
-    logisim
     kdePackages.kdenlive
     libreoffice
     obs-studio
@@ -59,7 +51,6 @@
     anki # Flashcards for language learning
     nwg-look
     arduino
-    quickshell
     discord
     obsidian
     (calibre.override {

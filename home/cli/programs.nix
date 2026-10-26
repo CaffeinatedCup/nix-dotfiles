@@ -1,45 +1,38 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   # Dev stuff and basic cli tools
 
-  programs.git = {
+  programs = {
+    git = {
+      enable = true;
+      signing.format = null;
+      settings = {
+        user.name = "CaffeinatedCup";
+        user.email = "z.degidio159@gmail.com";
+        pull.rebase = false;
+      };
+    };
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      enableZshIntegration = true;
+      silent = true;
+    };
+
+    crush = {
     enable = true;
-    signing.format = null;
-    settings = {
-      user.name = "CaffeinatedCup";
-      user.email = "z.degidio159@gmail.com";
-      pull.rebase = false;
+      settings = {
+        providers.openrouter.api_key = "$(cat /run/agenix/openrouter-api-key)";
+      };
     };
   };
 
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-    enableZshIntegration = true;
-    silent = true;
-  };
-
-
-  # RSS reader, might configure later
-  programs.newsboat = {
-    enable = true;
-    urls = [
-      {
-        url = "https://techcrunch.com/feed";
-      }
-    ];
-  };
-
-  programs.crush = {
-  enable = true;
-  settings = {
-    providers.openrouter.api_key = "$(cat /run/agenix/openrouter-api-key)";
-  };
-};
 
   home.packages = with pkgs; [
 
-  # Editors & Dev Tools
+
+  # Dev Tools
   ffmpeg
   pandoc
   tectonic
@@ -53,6 +46,11 @@
   gnumake
   platformio-core
   iw
+  cmake # remove eventually, should be confined to a dev shell
+  octaveFull
+  picocom
+  hugo
+  quickshell
 
 
   # CLI Enhancement
@@ -89,7 +87,7 @@
 
 
   # Wayland Debugging
-  wev # Wayland even viewer (for keybinds)
+  wev # Wayland event viewer (for keybinds)
 
 
   # Nix Tools
@@ -104,5 +102,6 @@
   ethtool
   pciutils # lspci
   usbutils # lsusb
+  udiskie
   ];
 }
