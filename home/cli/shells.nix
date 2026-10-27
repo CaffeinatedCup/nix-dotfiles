@@ -46,6 +46,7 @@
       ll="eza -l";
       lt="eza --tree";
       la="eza -la";
+      cd="z";
       silabs="nix run /home/zack/Code/embedded/arsenal-nexus/Silabs";
     };
     initContent = ''

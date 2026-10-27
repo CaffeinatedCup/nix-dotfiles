@@ -20,6 +20,13 @@
       silent = true;
     };
 
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+      shellWrapperName = "y";
+    };
+
+
     crush = {
     enable = true;
       settings = {
@@ -54,7 +61,6 @@
 
 
   # CLI Enhancement
-  yazi
   bat
   eza
   fd
