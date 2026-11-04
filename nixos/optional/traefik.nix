@@ -88,6 +88,12 @@
           entryPoints = [ "websecure" ];
           tls.certResolver = "le";
         };
+        books = {
+          rule = "Host(`books.zacharydegidio.com`)";
+          service = "bookorbit";
+          entryPoints = [ "websecure" ];
+          tls.certResolver = "le";
+        };
         home = {
           rule = "Host(`home.zacharydegidio.com`)";
           service = "homepage";
@@ -121,6 +127,9 @@
       ];
       services.freshrss.loadBalancer.servers = [
         { url = "http://100.71.212.63:8086"; }
+      ];
+      services.bookorbit.loadBalancer.servers = [
+        { url = "http://100.71.212.63:3001"; }
       ];
       services.homepage.loadBalancer.servers = [
         { url = "http://100.71.212.63:8082"; }

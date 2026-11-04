@@ -24,6 +24,20 @@
     owner = "freshrss";
   };
 
+  age.secrets.bookorbit-secrets = {
+    file = ../../secrets/bookorbit-secrets.age;
+    owner = "bookorbit";
+  };
+
+  services.bookorbit = {
+    enable = true;
+    environment = {
+      APP_URL = "https://books.zacharydegidio.com";
+      PORT = 3001;
+    };
+    environmentFile = config.age.secrets.bookorbit-secrets.path;
+  };
+
   services.memos = {
     enable = true;
     settings = {
@@ -130,6 +144,7 @@
         "Media & AI" = [
           { "Open WebUI" = { href = "https://ai.zacharydegidio.com"; }; }
           { "Memos" = { href = "https://memos.zacharydegidio.com"; }; }
+          { "BookOrbit" = { href = "https://books.zacharydegidio.com"; }; }
         ];
       }
       {
@@ -144,5 +159,5 @@
     ];
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 5230 3000 8222 9000 8081 8080 8082 8085 8086 ];
+  networking.firewall.allowedTCPPorts = [ 80 5230 3000 3001 8222 9000 8081 8080 8082 8085 8086 ];
 }
