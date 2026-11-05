@@ -8,6 +8,7 @@
   ./gui
   ./cli
   ./files.nix
+  inputs.pi-config.homeManagerModules.default
   ];
 
   # This value determines the home Manager release that your

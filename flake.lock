@@ -779,6 +779,21 @@
         "type": "github"
       }
     },
+    "pi-config": {
+      "locked": {
+        "lastModified": 1793854574,
+        "narHash": "sha256-oInxg4Iw4w6dHN/UFWdacu6WlOcxN942bygNSyFbkG4=",
+        "owner": "CaffeinatedCup",
+        "repo": "pi-config",
+        "rev": "281558c7cf6cb8a380b102becd20241f6c98e909",
+        "type": "github"
+      },
+      "original": {
+        "owner": "CaffeinatedCup",
+        "repo": "pi-config",
+        "type": "github"
+      }
+    },
     "plugins-claudecode": {
       "flake": false,
       "locked": {
@@ -829,6 +844,7 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "noctalia": "noctalia",
         "nvim-config": "nvim-config",
+        "pi-config": "pi-config",
         "spicetify-nix": "spicetify-nix",
         "stm32cubeide": "stm32cubeide",
         "waveforms": "waveforms",

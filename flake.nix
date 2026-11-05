@@ -23,6 +23,9 @@
     # Neovim
     nvim-config.url = "github:CaffeinatedCup/nvim-config";
 
+    # Pi agent harness
+    pi-config.url = "github:CaffeinatedCup/pi-config";
+
     # Zen Browser
     zen-browser.url = "github:youwen5/zen-browser-flake";
 
