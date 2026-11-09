@@ -800,11 +800,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1793937947,
-        "narHash": "sha256-j+BxG4T21AHhSlxUY9zutXxUs9ZFtfkPrUGgjQB6cdg=",
+        "lastModified": 1794191465,
+        "narHash": "sha256-cMMprG3QTIlUt3EaBwzdgWBTTl7QZ9Sgt+QHAqlEO+w=",
         "owner": "CaffeinatedCup",
         "repo": "pi-config",
-        "rev": "69177e700db58c3006cf7e4c79234d2e0b79da03",
+        "rev": "3df939b5dbfaf99809291fb633072f0f4ba113c7",
         "type": "github"
       },
       "original": {
