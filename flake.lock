@@ -674,6 +674,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1793726008,
+        "narHash": "sha256-jQp1wKvbwWdLBASTXkSi/VYmDJ5AbBi1WvcMt9HWJC8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1d060086d60cb76a40cf37109f979d88a5bd6396",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1789149629,
         "narHash": "sha256-eQUZVehWLDBbpBR2rq6DnuRee1ULT6Y675RhsYDSjYI=",
         "rev": "eaad089433ca2bb662274377d33df3d0e51ef28b",
@@ -685,7 +701,7 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1789632929,
         "narHash": "sha256-j08lBbqaYwjsW0xy6Dh4MNZpQ/oSvLU1MLAo38OXphM=",
@@ -698,7 +714,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1789546076,
         "narHash": "sha256-zVxLZiSnmaaPLwnhj7pwmqe3axBg/C6nG5JZsJMh2g4=",
@@ -780,12 +796,15 @@
       }
     },
     "pi-config": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
       "locked": {
-        "lastModified": 1793854574,
-        "narHash": "sha256-oInxg4Iw4w6dHN/UFWdacu6WlOcxN942bygNSyFbkG4=",
+        "lastModified": 1793937947,
+        "narHash": "sha256-j+BxG4T21AHhSlxUY9zutXxUs9ZFtfkPrUGgjQB6cdg=",
         "owner": "CaffeinatedCup",
         "repo": "pi-config",
-        "rev": "281558c7cf6cb8a380b102becd20241f6c98e909",
+        "rev": "69177e700db58c3006cf7e4c79234d2e0b79da03",
         "type": "github"
       },
       "original": {
@@ -853,7 +872,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "systems": "systems_5"
       },
       "locked": {
@@ -1023,7 +1042,7 @@
     },
     "waveforms": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1764782980,
@@ -1082,7 +1101,7 @@
     },
     "zen-browser": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1789636270,

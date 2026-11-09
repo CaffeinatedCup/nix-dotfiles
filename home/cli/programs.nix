@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   # Dev stuff and basic cli tools
 
@@ -29,9 +29,14 @@
 
     crush = {
     enable = true;
-      settings = {
-        providers.openrouter.api_key = "$(cat /run/agenix/openrouter-api-key)";
-      };
+    };
+
+    # Pi agent harness — package follows pi-config repo's own nixpkgs (unstable)
+    pi-coding-agent = {
+      enable = true;
+      package = inputs.pi-config.packages.${pkgs.stdenv.hostPlatform.system}.pi;
+      extraPackages = [ pkgs.nodejs ];
+      configDir = "${config.home.homeDirectory}/pi-config";
     };
   };
 
