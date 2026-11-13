@@ -44,6 +44,9 @@
   home.packages = with pkgs; [
 
 
+  conda
+
+
   # Dev Tools
   ffmpeg
   pandoc
